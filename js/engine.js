@@ -123,7 +123,7 @@ class GameEngine {
         
         // Check if this is the librarian speaking and show portrait
         if (dialogueEntry.speaker === "Librarian") {
-            this.speakerPortraitElement.innerHTML = '<img src="./assets/images/characters/librarian-neutral.png" alt="Librarian">';
+            this.speakerPortraitElement.innerHTML = '<img src="./assets/images/characters/librarian-neutral-1.png" alt="Librarian">';
             this.speakerPortraitElement.style.display = 'block';
             
             // Ensure dialog box has enough height for the portrait

@@ -99,12 +99,13 @@ body {
 /* Character Portrait in Dialog Box */
 .speaker-portrait {
     position: absolute;
-    top: -180px; /* Position relative to dialog box */
-    right: 20px; /* Position on right side instead of left */
-    width: 180px; /* Much bigger image */
-    height: 240px; /* Taller for character portrait */
+    bottom: calc(100% + 10px); /* Adjusted to snap the bottom of the portrait to the top of the dialog box with a gap */
+    right: 120px; /* Moved further to the left */
+    width: 180px;
+    height: 240px;
     overflow: hidden;
     display: none; /* Initially hidden */
+    margin-bottom: 0; /* Removed unnecessary adjustment */
 }
 
 .speaker-portrait img {
