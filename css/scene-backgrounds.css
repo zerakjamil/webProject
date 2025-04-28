@@ -1,0 +1,200 @@
+/* CSS-Based Scene Backgrounds for Echoes of the Library */
+
+/* Enhanced Library Entrance with Building Structure and Mist */
+.scene-library-detailed {
+    background-color: #0a0a12;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Misty background and sky */
+.scene-library-detailed::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        /* Moon in the sky */
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 230, 0.4) 0%, rgba(255, 255, 230, 0.1) 2%, rgba(0, 0, 0, 0) 10%),
+        /* Dark cloudy sky */
+        linear-gradient(to bottom, 
+            rgba(10, 12, 20, 1) 0%, 
+            rgba(20, 22, 35, 0.9) 40%, 
+            rgba(30, 30, 40, 0.8) 100%);
+    z-index: 1;
+}
+
+/* Library building structure */
+.scene-library-detailed::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        /* Library door (center bottom) */
+        radial-gradient(ellipse at 50% 85%, rgba(40, 30, 20, 0.9) 0%, rgba(40, 30, 20, 0.8) 5%, rgba(0, 0, 0, 0) 10%),
+        /* Doorway light/glow */
+        radial-gradient(ellipse at 50% 82%, rgba(100, 80, 40, 0.3) 0%, rgba(80, 60, 30, 0.1) 3%, rgba(0, 0, 0, 0) 10%),
+        /* Building structure - main facade */
+        linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0) 30%,
+            rgba(30, 25, 20, 0.6) 30%,
+            rgba(30, 25, 20, 0.8) 90%,
+            rgba(20, 15, 10, 0.9) 100%
+        ),
+        /* Building windows - left side */
+        radial-gradient(ellipse at 30% 50%, rgba(100, 90, 60, 0.1) 0%, rgba(60, 50, 40, 0.05) 2%, rgba(0, 0, 0, 0) 5%),
+        /* Building windows - right side */
+        radial-gradient(ellipse at 70% 50%, rgba(100, 90, 60, 0.1) 0%, rgba(60, 50, 40, 0.05) 2%, rgba(0, 0, 0, 0) 5%),
+        /* Building windows - center top */
+        radial-gradient(ellipse at 50% 40%, rgba(100, 90, 60, 0.15) 0%, rgba(60, 50, 40, 0.05) 2%, rgba(0, 0, 0, 0) 5%),
+        /* Building pillar - left */
+        linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 30%,
+            rgba(40, 35, 30, 0.3) 30%,
+            rgba(40, 35, 30, 0.3) 90%,
+            rgba(0, 0, 0, 0) 90%
+        ),
+        /* Building pillar - right */
+        linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 30%,
+            rgba(40, 35, 30, 0.3) 80%,
+            rgba(40, 35, 30, 0.3) 90%,
+            rgba(0, 0, 0, 0) 90%
+        );
+    background-position: 
+        center bottom,  /* door */
+        center bottom,  /* doorway light */
+        center center,  /* main facade */
+        left center,    /* left windows */
+        right center,   /* right windows */
+        center top,     /* center window */
+        20% center,     /* left pillar */
+        80% center;     /* right pillar */
+    background-size: 
+        150px 100px,    /* door */
+        100px 70px,     /* doorway light */
+        100% 100%,      /* main facade */
+        80px 80px,      /* left windows */
+        80px 80px,      /* right windows */
+        100px 60px,     /* center window */
+        50px 100%,      /* left pillar */
+        50px 100%;      /* right pillar */
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+/* Mist overlay */
+.scene-library-detailed .mist {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    pointer-events: none;
+}
+
+/* Front mist */
+.scene-library-detailed .mist::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        /* Ground mist */
+        linear-gradient(to top, 
+            rgba(200, 200, 220, 0.15) 0%, 
+            rgba(150, 150, 180, 0.05) 10%, 
+            rgba(0, 0, 0, 0) 30%),
+        /* Floating mist patches */
+        radial-gradient(ellipse at 20% 80%, rgba(200, 200, 220, 0.1) 0%, rgba(0, 0, 0, 0) 50%),
+        radial-gradient(ellipse at 60% 75%, rgba(200, 200, 220, 0.1) 0%, rgba(0, 0, 0, 0) 30%),
+        radial-gradient(ellipse at 80% 70%, rgba(200, 200, 220, 0.1) 0%, rgba(0, 0, 0, 0) 40%);
+    background-size: 100% 100%, 60% 30%, 40% 20%, 50% 25%;
+    background-repeat: no-repeat;
+    animation: mistFlow 25s infinite alternate ease-in-out;
+}
+
+/* Back mist */
+.scene-library-detailed .mist::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        /* Upper floating mist */
+        radial-gradient(ellipse at 30% 40%, rgba(100, 100, 140, 0.05) 0%, rgba(0, 0, 0, 0) 70%),
+        radial-gradient(ellipse at 70% 30%, rgba(100, 100, 140, 0.05) 0%, rgba(0, 0, 0, 0) 60%);
+    animation: backMistFlow 40s infinite alternate ease-in-out;
+}
+
+/* Rain effect */
+.scene-library-detailed .rain {
+    position: absolute;
+    top: -10%;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background: repeating-linear-gradient(to bottom,
+        rgba(200, 200, 255, 0) 0px,
+        rgba(200, 200, 255, 0) 3px,
+        rgba(200, 200, 255, 0.1) 4px,
+        rgba(200, 200, 255, 0) 5px);
+    animation: rain 0.5s infinite linear;
+    z-index: 4;
+    pointer-events: none;
+}
+
+/* Add mist flow animation */
+@keyframes mistFlow {
+    0% {
+        background-position: 0% 100%, 20% 80%, 60% 75%, 80% 70%;
+        opacity: 0.7;
+    }
+    50% {
+        opacity: 0.9;
+    }
+    100% {
+        background-position: 10% 100%, 25% 80%, 65% 75%, 75% 70%;
+        opacity: 0.7;
+    }
+}
+
+@keyframes backMistFlow {
+    0% {
+        background-position: 30% 40%, 70% 30%;
+        opacity: 0.5;
+    }
+    100% {
+        background-position: 35% 40%, 65% 30%;
+        opacity: 0.7;
+    }
+}
+
+/* Animations for the scenes */
+@keyframes rain {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(20px); }
+}
+
+@keyframes rainEffect {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 0.4; }
+}

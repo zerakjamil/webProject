@@ -1,0 +1,348 @@
+/* Main styling for Echoes of the Library */
+:root {
+    --dark-bg: #0a0a0c;
+    --dark-accent: #1a1a24;
+    --text-color: #e0e0e0;
+    --highlight-color: #915f33;
+    --danger-color: #8b0000;
+    --font-gothic: 'Playfair Display', serif;
+    --font-text: 'Crimson Text', serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    font-family: var(--font-text);
+    color: var(--text-color);
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+.game-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--dark-bg); /* Add initial background */
+}
+
+/* Layers for game visuals */
+.background-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 1s ease-in-out;
+    opacity: 0; /* Start layers as transparent */
+}
+
+.character-layer {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 90%;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.character-layer img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.effects-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.ui-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Dialog box styling */
+.dialog-box {
+    width: 90%;
+    max-width: 900px;
+    background-color: rgba(0, 0, 0, 0.75);
+    border: 2px solid var(--highlight-color);
+    border-radius: 5px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 999;
+}
+
+/* Character Portrait in Dialog Box */
+.speaker-portrait {
+    position: absolute;
+    top: -180px; /* Position relative to dialog box */
+    right: 20px; /* Position on right side instead of left */
+    width: 180px; /* Much bigger image */
+    height: 240px; /* Taller for character portrait */
+    overflow: hidden;
+    display: none; /* Initially hidden */
+}
+
+.speaker-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensure whole image is visible */
+    object-position: center bottom; /* Position from bottom */
+}
+
+.speaker {
+    position: absolute;
+    top: -1.5rem;
+    left: 2rem;
+    background-color: var(--highlight-color);
+    padding: 0.3rem 1rem;
+    font-family: var(--font-gothic);
+    font-weight: bold;
+    color: var(--dark-bg);
+}
+
+.dialog-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    min-height: 5rem;
+}
+
+/* Choice buttons */
+.choices-container {
+    width: 80%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+    z-index: 1000; /* Ensure choices appear above other elements */
+}
+
+.choice-btn {
+    background-color: rgba(10, 10, 12, 0.85);
+    border: 1px solid var(--highlight-color);
+    color: var(--text-color);
+    padding: 0.8rem 1.5rem;
+    font-family: var(--font-gothic);
+    text-align: left;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.choice-btn:hover {
+    background-color: rgba(145, 95, 51, 0.3);
+    transform: translateX(10px);
+}
+
+/* Game menu */
+.game-menu {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.menu-btn {
+    background-color: rgba(10, 10, 12, 0.7);
+    color: var(--text-color);
+    border: 1px solid var(--highlight-color);
+    padding: 0.5rem 1rem;
+    font-family: var(--font-gothic);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.menu-btn:hover {
+    background-color: var(--highlight-color);
+    color: var(--dark-bg);
+}
+
+/* Splash Screen Styles */
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 1s ease-out;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.splash-content h1 {
+    font-family: var(--font-gothic);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--highlight-color);
+}
+
+.splash-content p {
+    font-family: var(--font-text);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+#start-game {
+    background-color: var(--highlight-color);
+    color: var(--dark-bg);
+    border: none;
+    padding: 0.8rem 2rem;
+    font-family: var(--font-gothic);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#start-game:hover {
+    background-color: #b87a4a; /* Slightly darker highlight */
+}
+
+/* Saved Indicator Styles */
+.saved-indicator {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(145, 95, 51, 0.8); /* Highlight color with alpha */
+    color: var(--text-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1001;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+    font-family: var(--font-gothic);
+}
+
+/* Special effects */
+.flicker {
+    animation: flicker 0.5s infinite alternate;
+}
+
+.shake {
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+.pulse-effect {
+    animation: pulse 4s infinite alternate;
+    background: radial-gradient(circle at center, rgba(100, 20, 80, 0.2) 0%, rgba(0, 0, 0, 0) 60%);
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes shake { 
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-5px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(5px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 0.4; }
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .dialog-box {
+        width: 95%;
+        padding: 1rem;
+        z-index: 999; /* Fix the incomplete z-index property */
+        margin-bottom: 1rem;
+    }
+    
+    .speaker-portrait {
+        width: 60px;
+        height: 60px;
+        top: -65px;
+    }
+    
+    .choices-container {
+        width: 90%;
+    }
+    
+    .dialog-text {
+        font-size: 1rem;
+        min-height: 4rem;
+    }
+}
+
+/* Next Button Styling */
+.next-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    background-color: rgba(145, 95, 51, 0.7);
+    color: var(--text-color);
+    border: 1px solid var(--highlight-color);
+    border-radius: 4px;
+    padding: 0.4rem 1rem;
+    font-family: var(--font-gothic);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: none; /* Hidden by default, shown when dialogue is complete */
+}
+
+.next-btn:hover {
+    background-color: var(--highlight-color);
+    transform: translateX(3px);
+}
+
+.next-btn .arrow {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 0.8em;
+}
+
+/* Animation for the next button */
+@keyframes pulse-button {
+    0%, 100% { opacity: 0.9; }
+    50% { opacity: 1; }
+}
+
+.next-btn.visible {
+    display: block;
+    animation: pulse-button 1.5s infinite;
+}
