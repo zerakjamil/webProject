@@ -117,9 +117,23 @@ class GameEngine {
         }
         
         const dialogueEntry = this.currentScene.dialogue[this.dialogIndex];
-        this.speakerElement.textContent = dialogueEntry.speaker || '';
+        
+        // Handle player name for the speaker
+        let speakerName = dialogueEntry.speaker;
+        if (speakerName === "You" && window.playerName) {
+            speakerName = window.playerName;
+        }
+        
+        this.speakerElement.textContent = speakerName || '';
         this.isDialogueComplete = false;
-        this.currentDialogueText = dialogueEntry.text;
+        
+        // Process text to replace "You" with player name if needed
+        let dialogText = dialogueEntry.text;
+        if (window.playerName && dialogText.includes("You")) {
+            dialogText = dialogText.replace(/\bYou\b/g, window.playerName);
+        }
+        
+        this.currentDialogueText = dialogText;
         
         // Check if this is the librarian speaking and show portrait
         if (dialogueEntry.speaker === "Librarian") {
@@ -149,7 +163,7 @@ class GameEngine {
         
         this.dialogElement.innerHTML = '';
         this.typingInstance = new Typed('#dialog', {
-            strings: [dialogueEntry.text],
+            strings: [dialogText],
             typeSpeed: this.typingSpeed,
             showCursor: false,
             onComplete: () => {
@@ -497,44 +511,51 @@ if (typeof AudioManager === 'undefined') {
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM fully loaded and parsed.');
     try {
-        // Show splash screen first
-        const splashScreen = document.createElement('div');
-        splashScreen.className = 'splash-screen';
-        splashScreen.innerHTML = `
-            <div class="splash-content">
-                <h1>Echoes of the Library</h1>
-                <p>A dark journey through forgotten knowledge</p>
-                <button id="start-game">Enter the Library</button>
-            </div>
-        `;
-        document.body.appendChild(splashScreen);
-        console.log('Splash screen added to DOM.');
+        // Check if we should skip the splash screen (from the title page)
+        if (window.skipSplash) {
+            console.log('Skipping splash screen, initializing Game Engine directly...');
+            const game = new GameEngine();
+            window.gameEngine = game; // Make it accessible globally
+            game.startGame(); // Start the game immediately
+        } else {
+            // Show splash screen first
+            const splashScreen = document.createElement('div');
+            splashScreen.className = 'splash-screen';
+            splashScreen.innerHTML = `
+                <div class="splash-content">
+                    <h1>Echoes of the Library</h1>
+                    <p>A dark journey through forgotten knowledge</p>
+                    <button id="start-game">Enter the Library</button>
+                </div>
+            `;
+            document.body.appendChild(splashScreen);
+            console.log('Splash screen added to DOM.');
 
-        const startButton = document.getElementById('start-game');
-        if (!startButton) {
-            console.error('Start button not found in splash screen!');
-            return;
+            const startButton = document.getElementById('start-game');
+            if (!startButton) {
+                console.error('Start button not found in splash screen!');
+                return;
+            }
+
+            startButton.addEventListener('click', () => {
+                console.log('Start button clicked.');
+                splashScreen.style.opacity = '0';
+                // Wait for fade out transition before removing and starting game
+                setTimeout(() => {
+                    splashScreen.remove();
+                    console.log('Splash screen removed. Initializing Game Engine...');
+                    try {
+                        const game = new GameEngine();
+                        window.gameEngine = game; // Make it accessible globally
+                        console.log('GameEngine initialized.');
+                        game.startGame(); // Start the game
+                    } catch (gameInitError) {
+                         console.error("Error initializing or starting GameEngine:", gameInitError);
+                         document.body.innerHTML += `<div style="color:red; padding:20px; background:rgba(0,0,0,0.8); position:fixed; top:10px; left:10px; z-index:1000;">Fatal Error during game initialization. Check console.</div>`;
+                    }
+                }, 1000); // Match splash screen fade duration
+            });
         }
-
-        startButton.addEventListener('click', () => {
-            console.log('Start button clicked.');
-            splashScreen.style.opacity = '0';
-            // Wait for fade out transition before removing and starting game
-            setTimeout(() => {
-                splashScreen.remove();
-                console.log('Splash screen removed. Initializing Game Engine...');
-                try {
-                    const game = new GameEngine();
-                    window.gameEngine = game; // Make it accessible globally
-                    console.log('GameEngine initialized.');
-                    game.startGame(); // Start the game
-                } catch (gameInitError) {
-                     console.error("Error initializing or starting GameEngine:", gameInitError);
-                     document.body.innerHTML += `<div style="color:red; padding:20px; background:rgba(0,0,0,0.8); position:fixed; top:10px; left:10px; z-index:1000;">Fatal Error during game initialization. Check console.</div>`;
-                }
-            }, 1000); // Match splash screen fade duration
-        });
-
     } catch(e) {
         console.error("Fatal Error during DOMContentLoaded setup:", e);
         // Display a fallback error message if splash screen setup fails

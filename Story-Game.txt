@@ -1,0 +1,188 @@
+Echoes of the Library
+Premise:
+Alex, a university student, seeks shelter from a rainstorm in an ancient library, only to discover it's no ordinary building. The doors won't let him leave, and something about this place feels eerily familiar though he's certain he's never been here before. As he explores deeper, he uncovers disturbing truths: this library exists outside normal time, he's been trapped in a cycle of returning here across decades, and those who fail to escape become part of the collection. The ancient wooden door with strange symbols, the ledger with his name already written in it, the whispering books—all hold clues to his escape. But beware the mysterious librarian and the shadowy Curator who hunts through the stacks. Knowledge is his only way out, but time is running out.
+START:
+Scene 1: The Storm Shelter
+The afternoon lecture on Ancient Linguistics had run longer than expected, and now Alex was paying the price. Rain poured down in sheets as he hurried along the empty streets, his backpack clutched tightly against his chest to protect his laptop and textbooks.
+"Just three more blocks to my apartment," he muttered, pushing his soaked hair from his eyes.
+Lightning flashed, followed almost immediately by a deafening crack of thunder. The storm was directly overhead now.
+That's when Alex noticed it – an old brick building set back from the road, partially hidden by overgrown trees. A library. In the four years he'd been walking this route to campus, he'd never noticed it before.
+"That's strange," he thought, squinting through the rain. "Has that always been there?"
+Another flash of lightning illuminated an ornate sign: "Aeternum Library." The windows glowed with warm light, promising shelter.
+Without hesitation, Alex darted up the path toward the entrance. The ancient wooden door creaked reluctantly as he pushed it open, almost as if warning him against entering. Something about this place felt strangely familiar, though he was certain he'd never been here before.
+Inside, dust hung thick in the air along with the musty scent of old books. The library seemed unnaturally empty.
+"Hello? Is anyone here? I just need somewhere to wait out the storm..." His voice echoed through the vast hall, met only by distant thunder.
+A strange sensation washed over him—as if the books themselves were somehow aware of his presence. And for just a moment, he thought he saw a tall, shadowy figure watching him from between the stacks, but when he blinked, it was gone.
+Options:
+
+Explore deeper into the library
+Check the reception desk for a librarian
+Try to leave and find shelter elsewhere
+
+Scene 2: The Impossible Door
+Alex turned to leave, but the door he came through had... changed. It was older now, made of dark wood with strange symbols carved into its frame. As he reached for the handle, a deafening crack of thunder shook the building and the lights flickered ominously.
+"What the...? This isn't the door I came through. And these symbols..."
+He tried the handle, but it wouldn't budge. Some of the symbols looked familiar from his linguistics research at university, but they shouldn't exist together—they spanned thousands of years and disparate cultures.
+As Alex examined the door more closely, he felt a cold draft behind him. The lights dimmed further. In the glass reflection of a nearby bookcase, he caught a glimpse of something tall and skeletal, wearing formal attire from another century. When he spun around, nothing was there except a trail of what looked like black ink droplets on the floor.
+It seemed Alex had no choice but to venture deeper into the library.
+Options:
+
+Explore deeper into the library
+Check the reception desk for a librarian
+
+Scene 3: The Abandoned Reception
+The reception desk was covered in a thin layer of dust. A vintage brass bell sat on the counter beside an open ledger, its pages yellowed with age. The last entry date was from over 50 years ago.
+"That can't be right..." Alex muttered, adjusting his glasses. "The library couldn't have been closed for that long. This building would be condemned."
+He noticed a small framed photograph on the desk showing the library's exterior, but the surrounding buildings looked different—like a snapshot from another era.
+Next to the photograph was an elegant, old-fashioned nameplate reading "Head Librarian," and beside it, a more ornate one made of tarnished silver that simply read "The Curator" in elaborate script. Black ink stains surrounded it, still wet to the touch.
+Options:
+
+Ring the bell
+Examine the ledger more closely
+Read a nearby newspaper clipping
+
+Scene 4: The Mysterious Ledger
+Alex leaned closer to examine the ancient ledger. The yellowed pages were filled with elegant handwriting, recording names and dates that spanned centuries—yet the handwriting remained identical throughout.
+As he flipped through the pages, he noticed something unsettling. The names began to repeat across decades, with visitors returning multiple times throughout their lives.
+Even stranger, some borrowers' names had disturbing notes beside them: "Never returned," "Found only the cover," or most disturbingly: "Returned different." These last entries were always accompanied by a strange mark that looked like a stylized quill pen—drawn in what appeared to be dried black blood.
+A chill ran down Alex's spine as he noticed his own name written at the bottom of today's page, with a blank space beside it waiting to be filled. Next to it was the same quill mark, but in fresh, still-glistening ink.
+Behind him, a floorboard creaked. Something was watching from the shadows.
+Options:
+
+Ring the bell to confront whoever wrote his name
+Look for his name in earlier entries
+Explore the main hall
+
+Scene 5: Echoes of Yourself
+With trembling fingers, Alex flipped back through the ledger, scanning for his name in earlier entries.
+There—five years ago. His name appeared with the note: "Borrowed: Cartography of Dreams. Returned: On time."
+Ten years before that: "Borrowed: Principles of Memory Manipulation. Returned: Reader claimed pages were blank."
+And earliest of all, thirty years ago—before he was even born: "Borrowed: The Architecture of Time. Note: Reader promised to return."
+"This is impossible. I would remember coming here. Unless..."
+Suddenly, fragments of memory resurfaced—sitting at these same tables, walking these same aisles, but with different clothes, different hairstyles... throughout different decades.
+In each memory, he glimpsed the same skeletal figure watching from the shadows, ink dripping from long, spindly fingers. The Curator, cataloging his visits, marking him for the collection.
+As Alex ran his hand under the desk edge, his fingers caught on something—a folded piece of paper taped beneath. The note was written in his handwriting but appeared decades old: "If you're reading this, you've forgotten again. The exit isn't a door—it's a book. Find The Unwritten End in the restricted section. Beware the Curator—he's hunting you."
+Options:
+
+Ring the bell to confront the librarian
+Search for "The Unwritten End" book
+Look for notes you might have left yourself in previous visits
+
+Scene 6: The Endless Main Hall
+Alex stepped into the main hall, which stretched before him, lined with towering bookshelves that seemed to reach impossibly high. Dust motes danced in beams of light that filtered through stained glass windows depicting readers throughout history.
+"I've never seen a library like this before... it's enormous," he whispered to himself, his voice carrying further than it should have in the cavernous space.
+As he walked further in, Alex noticed the layout seemed... wrong. Corridors twisted in ways that defied the building's exterior dimensions. And in the distance, he heard what sounded like... whispers. Not just any whispers—they seemed to know his name.
+He spotted an unusual section of the library ahead with a faded sign reading "Restricted Section," and a large wooden directory map on the wall.
+From somewhere deeper in the stacks came the sound of footsteps—slow, measured, deliberate. And a slight dragging sound, as if something was being pulled across the floor. Wherever the sound passed, the whispers of the books grew silent in fear.
+Options:
+
+Follow the sound of whispers
+Examine the directory map
+Return to the entrance
+Hide from the approaching footsteps
+
+Scene 7: The Impossible Map
+Alex approached the ornate wooden directory map mounted on the wall. It showed the library's layout, but something was very wrong with its design.
+Sections overlapped in impossible ways. Rooms appeared to exist in multiple places at once. And strangest of all, the map seemed to shift slightly when he wasn't looking directly at it.
+"This can't be architecturally possible..." he murmured, drawing on his minor in architectural studies. "Unless the building itself is changing."
+He noticed one section labeled "The Archive of Visitors" and another called "The Nexus of Endings" deep within the restricted section.
+As he leaned closer, Alex noticed tiny handwritten notes in the margins—similar to his own handwriting. One note pointed to the restricted section: "The Unwritten End is here. The true exit."
+Another, hastily scrawled, read: "The Curator's Chamber—AVOID AT ALL COSTS." It pointed to a black spot on the map that seemed to absorb light rather than reflect it.
+As if summoned by his thoughts, a shadow fell across the map. Alex froze, afraid to turn around. In the polished wood reflection, he could see the outline of a tall figure in formal Victorian dress, head tilted at an unnatural angle, watching him.
+Options:
+
+Head to the Archive of Visitors
+Go directly to the restricted section
+Return to exploring the main hall
+Turn and confront what stands behind you
+
+Scene 8: The Eternal Librarian
+Alex rang the bell. Its clear tone echoed unnaturally long through the empty library.
+After a moment, he heard soft footsteps. A tall, slender woman appeared from between the bookshelves. Her appearance struck him as timeless—she could be thirty or she could be sixty. Her eyes held the depth of centuries.
+"Welcome to our humble collection," she said with a smile. "It's been... quite some time since we've had a visitor."
+Her voice was soft but carried a strange resonance. Her eyes seemed to look through Alex rather than at him.
+"I'm sorry to intrude," he said. "I just needed shelter from the storm. Is it alright if I stay for a while?"
+She glanced nervously at the shadows behind him. "Of course. But I must warn you, we close at midnight, and... the Curator doesn't like visitors who stay too long."
+"The Curator? Who is—"
+"Shhh," she interrupted, her eyes wide with fear. "Don't speak of him too loudly. He always knows when he's being discussed." She lowered her voice to a whisper. "Just... don't let him mark you for the collection."
+Options:
+
+Ask about the strange door at the entrance
+Inquire about the special collection
+Ask about the Curator
+Thank her and explore on your own
+
+Scene 9: The Confrontation
+"What have you done to me?" Alex demanded, his voice rising with fear and anger. "According to that ledger, I've been coming here for decades—even before I was born."
+"Time works differently here," the librarian replied calmly. "The library exists in all moments at once. And you, dear reader, have been quite persistent across many lifetimes."
+"Why can't I remember my previous visits? What happens to people who don't return?"
+"Some knowledge comes at a cost. The mind protects itself by forgetting what it cannot comprehend. As for those who don't return..."
+She glanced toward the bookshelves, a strange sadness in her eyes.
+"They become part of the collection. Every book has an author, after all."
+"And the Curator? What is his role in all this?"
+The librarian's face paled. "He was once like me—a guardian of knowledge. But he grew obsessed with preserving stories. Now he... harvests them. From people like you. He believes the only way to truly understand a person's story is to... bind them to the page."
+From somewhere in the library came the sound of slow, deliberate footsteps.
+"He's coming," she whispered. "You must hurry."
+Options:
+
+"How do I break this cycle and escape for good?"
+"What are you? Are you even human?"
+Leave immediately to search for The Unwritten End
+
+Scene 10: The Final Choice
+After navigating the impossible architecture of the library, uncovering notes from his past selves, and evading the watchful eyes of the Curator, Alex finally found it—The Unwritten End—the book that held his freedom.
+As he opened its pages, the librarian appeared, her form flickering between human and something else entirely. Behind her loomed the Curator, a tall skeletal figure in Victorian formal wear, his face a shadowy void beneath a top hat, black ink dripping from his long fingers.
+"You stand at the crossroads now," the librarian said, her voice resonating with power. "Three paths lie before you:
+Read the final page and break your connection to the library forever...
+Embrace the knowledge offered and become one with the collection...
+Or use what you've learned to free not just yourself, but all who are trapped here."
+The Curator reached out a dripping hand, his voice a rasping whisper: "Your story would make such a fine addition to my collection. Give yourself to the library willingly, and I promise the binding will be... almost painless."
+The decision was Alex's, and it would determine not just his fate, but the fate of countless souls lost to the library's shelves.
+Options:
+
+Read the final page to escape (Ending: Escape)
+Choose knowledge over freedom (Ending: Transformation)
+Use the Architect's Key to free everyone (Ending: Liberation)
+
+ENDINGS:
+Ending: Escape
+As Alex read the final page of The Unwritten End, the words began to glow with golden light. The library around him trembled, as if protesting his imminent departure.
+"So, you've found it at last. The true exit. After all these cycles..." the librarian said.
+"No!" The Curator lunged forward, ink spraying from his fingertips like black blood. "Your story is MINE!"
+"This ends now. I'm breaking the loop," Alex replied, his voice steady despite his racing heart.
+Light poured from the book, enveloping him. The Curator's reaching hands passed through him like smoke. For a moment, Alex saw the countless versions of himself who had walked these halls before—and they all smiled in relief.
+The light faded, and Alex found himself standing outside in the rain. The storm had passed, and the building behind him was just an ordinary, abandoned library.
+He had broken free from the cycle, but a part of him would always remember the endless shelves, the librarian's sad eyes, and the horror of the Curator's reaching hands.
+The next day, Alex would search university records for any mention of the Aeternum Library, but find nothing. He would walk the same street, but the building would be gone as if it had never existed—yet the knowledge he gained would remain, changing the course of his studies and his life.
+Ending: Transformation
+Alex made his choice—knowledge over freedom. Some secrets were worth any price.
+"Few choose this path willingly. But the library always recognizes true seekers of knowledge," the librarian whispered.
+The Curator circled them, his movement fluid like ink in water. "Yesss... join us... become immortal in the stacks..."
+"I want to understand everything," Alex said, his academic curiosity finally overtaking his fear. "No matter the cost."
+He felt his body growing lighter, his consciousness expanding. The boundaries between him and the library began to blur.
+His memories stretched backward through centuries—he had always been here, and always would be.
+As his physical form faded, Alex realized he wasn't disappearing—he was becoming something greater. His consciousness merged with the library itself.
+Now he would welcome new visitors, guide new seekers through the endless shelves. A new custodian of forbidden knowledge, standing between innocent readers and the Curator's insatiable hunger.
+Years later, a student would seek shelter from a storm and be greeted by a tall, slender librarian with familiar eyes behind scholarly glasses, who seemed both young and impossibly old at the same time.
+Ending: Liberation
+With the final piece of the puzzle in place, Alex understood the nature of the library at last—and how to free it.
+"It was never meant to trap people," he said with sudden clarity. "It was meant to preserve knowledge, but something corrupted its purpose."
+"For centuries, I've waited for someone who would understand. Who would see the prison for what it is," the librarian said, her form flickering to reveal her true nature—a guardian spirit bound to the library against her will.
+The Curator howled with rage. "You'll destroy everything I've built! Centuries of perfect preservation!"
+"Break the cycle. Free us all," the librarian pleaded.
+Alex placed The Architect's Key in the ancient lock hidden behind the reception desk. With a turn, reality itself seemed to sigh with relief.
+The Curator lunged for him, but too late—the library's walls became transparent, revealing thousands of trapped souls—former visitors now freed from their literary prison.
+The Curator's form began to dissolve, ink running down his frame like tears. "My collection... my beautiful collection..."
+As the building crumbled around him, the librarian took Alex's hand and led him to safety.
+Three days later, the university archaeology department would be buzzing with the discovery of thousands of ancient texts thought lost to history, mysteriously appearing overnight in the campus library. And a new linguistics professor would join the faculty—a woman with ancient eyes who seemed to know Alex from somewhere, though he couldn't quite place where they had met before.
+ELEMENTS OF MYSTERY:
+
+The library exists outside normal time and space
+Alex is trapped in a cycle of returning and forgetting
+Books that whisper and seem aware
+A librarian who is more than she appears
+The sinister Curator who collects people's stories by binding them to books
+Architecture that defies physical laws
+A ledger recording impossible visits
+Notes left by past selves
+Three distinct fates depending on choices
