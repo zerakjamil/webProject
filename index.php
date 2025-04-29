@@ -1,5 +1,10 @@
 <?php
 // Remove session handling - using localStorage instead
+// Check if we should skip the splash screen
+$skip_splash = isset($_GET['skip_splash']) && $_GET['skip_splash'] === 'true';
+
+// Get player name if provided
+$player_name = isset($_GET['player_name']) ? htmlspecialchars($_GET['player_name']) : 'Alex';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -63,6 +68,13 @@
     <script src="js/transitions.js"></script>
     <script src="js/story.js"></script>
     <script src="js/engine.js"></script>
+    
+    <!-- Pass the skip_splash parameter to JavaScript -->
+    <script>
+        // Set global variables
+        window.skipSplash = <?php echo $skip_splash ? 'true' : 'false'; ?>;
+        window.playerName = "<?php echo $player_name; ?>"; // Make player name available to game
+    </script>
     
     <!-- Add error handling -->
     <script>

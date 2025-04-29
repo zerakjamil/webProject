@@ -22,7 +22,7 @@ const STORY_DATA = {
                 text: "Inside, the air is thick with dust and the scent of old books. The library seems unnaturally empty."
             },
             {
-                speaker: "You",
+                speaker: window.playerName || "You",
                 text: "Hello? Is anyone here? I just need somewhere to wait out the storm..."
             },
             {
