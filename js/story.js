@@ -2,61 +2,61 @@
 const STORY_DATA = {
     // دیمەنی سەرەتا: دەروازەی کتێبخانە
     "entrance": {
-    id: "entrance",
-    background: "scene-library-detailed",
-    dialogue: [
-    {
-    speaker: "گێڕەرەوە",
-    text: "باران بە توندی دەبارێت لە دەرەوە، کاتێک بە پەلە بەرەو کتێبخانە کۆنەکە ڕادەکەیت، بە دوای پەناگایەک لە ڕەشەباکە."
-    },
-    {
-    speaker: "گێڕەرەوە",
-    text: "دەرگا کۆنە دارینەکە بە ناڕەزایی دەکرێتەوە، وەک ئەوەی هۆشدارت بداتێ لە چوونەژوورەوە."
-    },
-    {
-    speaker: "گێڕەرەوە",
-    text: "شتێک سەبارەت بەم شوێنە هەست بە ئاشنایی دەکات، هەرچەندە دڵنیایت کە پێشتر نەهاتوویتە ئێرە."
-    },
-    {
-    speaker: "گێڕەرەوە",
-    text: "لە ناوەوە، هەوا چڕە بە تۆز و بۆنی کتێبی کۆن. کتێبخانەکە بە شێوەیەکی نائاسایی چۆڵە."
-    },
-    {
-    speaker: "تۆ",
-    text: "ساڵو؟ کەس لێرە نییە؟ من تەنها پێویستم بە شوێنێکە بۆ چاوەڕێ کردنی کۆتایی ڕەشەباکە..."
-    },
-    {
-    speaker: "گێڕەرەوە",
-    text: "دەنگت لە هۆڵە فراوانەکە دەنگ دەداتەوە. هیچ وەڵامێک نایەت، جگە لە گرمەی دوورەدەستی هەورە تریشقە."
-    },
-    {
-    speaker: "گێڕەرەوە",
-    text: "هەستێکی سەیر داتدەگرێت—هەستێک کە کتێبەکان بە جۆرێک ئاگادارن لە بوونی تۆ."
-    }
-    ],
-    nextScene: "main_hall",
-    effects: {
-    visual: "flicker"
-    },
-    choices: [
-    {
-    text: "زیاتر قووڵ ببەرەوە ناو کتێبخانەکە",
-    nextScene: "main_hall"
-    },
-    {
-    text: "مێزی پێشوازی بپشکنە بۆ دۆزینەوەی کتێبدارێک",
-    nextScene: "reception"
-    },
-    {
-    text: "باشترە دەربچم و شوێنێکی تر بدۆزمەوە...",
-    nextScene: "try_leave"
-    }
-    ]
+        id: "entrance",
+        background: "items/Library", // Changed from "scene-library-detailed" to use the Library.png image
+        dialogue: [
+            {
+                speaker: "Narrator",
+                text: "The rain pours heavily outside as you rush toward the old library, seeking shelter from the storm."
+            },
+            {
+                speaker: "Narrator",
+                text: "The ancient wooden door creaks open reluctantly, as if warning you against entering."
+            },
+            {
+                speaker: "Narrator",
+                text: "Something about this place feels familiar, though you're certain you've never been here before."
+            },
+            {
+                speaker: "Narrator",
+                text: "Inside, the air is thick with dust and the scent of old books. The library seems unnaturally empty."
+            },
+            {
+                speaker: window.playerName || "You",
+                text: "Hello? Is anyone here? I just need somewhere to wait out the storm..."
+            },
+            {
+                speaker: "Narrator",
+                text: "Your voice echoes through the vast hall. No response comes, save for the distant rumble of thunder."
+            },
+            {
+                speaker: "Narrator",
+                text: "A strange sensation washes over you—a feeling that the books are somehow aware of your presence."
+            }
+        ],
+        nextScene: "main_hall",
+        effects: {
+            visual: "flicker"
+        },
+        choices: [
+            {
+                text: "Explore deeper into the library",
+                nextScene: "main_hall"
+            },
+            {
+                text: "Check the reception desk for a librarian",
+                nextScene: "reception"
+            },
+            {
+                text: "Maybe I should leave and find somewhere else...",
+                nextScene: "try_leave"
+            }
+        ]
     },
     // هەوڵدان بۆ دەرچوون
     "try_leave": {
         id: "try_leave",
-        background: "scene-library-detailed",
+        background: "items/door", // Changed to use the door.png image from items folder
         effects: {
             visual: "flicker"
         },
@@ -101,7 +101,7 @@ const STORY_DATA = {
     // دیمەنی مێزی پێشوازی
     "reception": {
         id: "reception",
-        background: "scene-reception-desk",
+        background: "scenes/library-desk-scene", // Changed from "scene-reception-desk" to use the new image
         dialogue: [
             {
                 speaker: "گێڕەرەوە",
@@ -190,7 +190,7 @@ const STORY_DATA = {
     // دیمەنی مێزی پێشوازی - پێشکەوتوو
     "reception": {
         id: "reception",
-        background: "scene-reception-desk",
+        background: "scenes/library-desk-scene", // Changed from "scene-reception-desk" to use the new image
         dialogue: [
             {
                 speaker: "گێڕەرەوە",
@@ -232,7 +232,7 @@ const STORY_DATA = {
     // دیمەنی نوێ: بڕوانامەی ڕۆژنامە
     "newspaper_clipping": {
         id: "newspaper_clipping",
-        background: "scene-reception-desk",
+        background: "scenes/library-desk-scene", // Changed from "scene-reception-desk" to use the new image
         effects: {
             visual: "zoom"
         },
@@ -269,7 +269,7 @@ const STORY_DATA = {
     // دیمەنی پێشکەوتووی پشکنینی دەftەر
     "examine_ledger": {
         id: "examine_ledger",
-        background: "scene-reception-desk",
+        background: "scenes/library-desk-scene", // Changed from "scene-reception-desk" to use the new image
         effects: {
             visual: "flicker"
         },
@@ -328,7 +328,7 @@ const STORY_DATA = {
     // دیمەنی دۆزینەوەی مێژووی خۆت
     "find_your_history": {
         id: "find_your_history",
-        background: "scene-reception-desk",
+        background: "scenes/library-desk-scene", // Changed from "scene-reception-desk" to use the new image
         effects: {
             visual: "flashback"
         },
@@ -374,7 +374,7 @@ const STORY_DATA = {
     // دیمەنی پشکنینی تۆمارێکی کۆن
     "examine_tome": {
         id: "examine_tome",
-        background: "scene-reception-desk",
+        background: "items/examine_tome", // Changed from "scenes/library-desk-scene" to use the new image
         effects: {
             visual: "zoom"
         },
@@ -414,7 +414,7 @@ const STORY_DATA = {
     // دیمەنی نوێ: دۆزینەوەی تێبینیەکانت
     "find_notes": {
         id: "find_notes",
-        background: "scene-reception-desk",
+        background: "scenes/library-desk-scene", // Changed from "scene-reception-desk" to use the new image
         dialogue: [
             {
                 speaker: "Narrator",
@@ -445,7 +445,7 @@ const STORY_DATA = {
        // Scene for following whispers
        "follow_whispers": {
         id: "follow_whispers",
-        background: "scene-restricted-section",
+        background: "items/restricted_section", // Changed from "scene-restricted-section" to use the new image
         dialogue: [
             {
                 speaker: "گێڕەوە",
@@ -486,60 +486,58 @@ const STORY_DATA = {
 
     // Enhanced Meet the Librarian scene
     "meet_librarian": {
-    id: "meet_librarian",
-    background: "scene-reception-desk",
-    character: {
-    id: "librarian",
-    emotion: "neutral"
-    },
-    dialogue: [
-    {
-    speaker: "گێڕەرەوە", // Narrator
-    text: "زەنگەکە لێدەدەیت. دەنگی ڕوونی بە شێوەیەکی نائاسایی درێژ لە کتێبخانە چۆڵەکەدا دەنگدەداتەوە.",
-    portrait: false // Explicitly hide portrait for narrator
-    },
-    {
-    speaker: "کتێبدار", // Librarian
-    text: "بەخێربێیت بۆ کۆکراوە سادەکەمان. ماوەیەکی... زۆرە میوانمان نەبووە.",
-    portrait: "librarian-neutral" // Explicitly specify portrait
-    },
-    {
-    speaker: "گێڕەرەوە",
-    text: "ڕووخساری وەک شتێکی بێ کات وایە—لەوانەیە سی ساڵ بێت یان شەست ساڵ. چاوەکانی قووڵایی چەندین سەدەیان تێدایە."
-    },
-    {
-    speaker: "تۆ",
-    text: "بەخێربێیت بۆ کۆکراوە سادەکەمان. ماوەیەکی... زۆرە میوانمان نەبووە."
-    },
-    {
-    speaker: "گێڕەرەوە",
-    text: "دەنگی نەرمە بەڵام دەنگدانەوەیەکی سەیری هەیە. چاوەکانی وا دیارە لە ناوتەوە دەڕوانن نەک تەنها تەماشات بکەن."
-    },
-    {
-    speaker: "تۆ",
-    text: "داوای لێبوردن دەکەم بۆ تێپەڕبوون. تەنها پێویستم بە داڵدەیەک بوو لە باهۆزەکە. ئایا ڕێگام پێدەدەیت بۆ ماوەیەک بمێنمەوە؟"
-    }
-    ],
-    choices: [
-    {
-    text: "پرسیار بکە دەربارەی دەرگا سەیرەکەی بەردەرگا",
-    nextScene: "ask_door"
-    },
-    {
-    text: "پرسیار بکە دەربارەی 'کۆکراوەی تایبەت'",
-    nextScene: "special_collection"
-    },
-    {
-    text: "سوپاسی بکە و بە تەنها بگەڕێ",
-    nextScene: "main_hall"
-    }
-    ]
+        id: "meet_librarian",
+        background: "scenes/library-desk-scene", // Changed from "scene-reception-desk" to use the new image
+        character: {
+            id: "librarian",
+            emotion: "neutral"
+        },
+        dialogue: [
+            {
+                speaker: "Narrator",
+                text: "You ring the bell. Its clear tone echoes unnaturally long through the empty library."
+            },
+            {
+                speaker: "Narrator",
+                text: "After a moment, you hear soft footsteps. A tall, slender woman appears from between the bookshelves."
+            },
+            {
+                speaker: "Narrator",
+                text: "Her appearance strikes you as timeless—she could be thirty or she could be sixty. Her eyes hold the depth of centuries."
+            },
+            {
+                speaker: "You",
+                text: "Welcome to our humble collection. It's been... quite some time since we've had a visitor."
+            },
+            {
+                speaker: "Narrator",
+                text: "Her voice is soft but carries a strange resonance. Her eyes seem to look through you rather than at you."
+            },
+            {
+                speaker: "You",
+                text: "I'm sorry to intrude. I just needed shelter from the storm. Is it alright if I stay for a while?"
+            }
+        ],
+        choices: [
+            {
+                text: "Ask about the strange door at the entrance",
+                nextScene: "ask_door"
+            },
+            {
+                text: "Inquire about the 'special collection'",
+                nextScene: "special_collection"
+            },
+            {
+                text: "Thank her and explore on your own",
+                nextScene: "main_hall"
+            }
+        ]
     },
 
     // Scene for asking about the door
     "ask_door": {
         id: "ask_door",
-        background: "scene-reception-desk",
+        background: "scenes/library-desk-scene", // Changed from "scene-reception-desk" to use the new image
         character: {
             id: "librarian",
             emotion: "neutral"
@@ -580,75 +578,75 @@ const STORY_DATA = {
 
     // New scene for confronting librarian
     "meet_librarian_confrontation": {
-    id: "meet_librarian_confrontation",
-    background: "scene-reception-desk",
-    character: {
-    id: "librarian",
-    emotion: "concerned"
-    },
-    dialogue: [
-    {
-    speaker: "گێڕەرەوە",
-    text: "بە توندی زەنگەکە لێدەدەیت. دەنگەکەی وەک چەقۆیەک بێدەنگییەکە دەبڕێت."
-    },
-    {
-    speaker: "گێڕەرەوە",
-    text: "کتێبدارەکە هەر دەستبەجێ دەردەکەوێت، وەک ئەوەی چاوەڕێی دەکرد لە شوێنێک کە نەبینرێت."
-    },
-    {
-    speaker: "کتێبدار",
-    text: "ئاه، ئەوەتای. هێندە زوو گەڕایتەوە؟ بە گشتی کاتی زیاترت دەوێت بۆ... بیرهێنانەوە."
-    },
-    {
-    speaker: "تۆ",
-    text: "چیت بەسەر من هێناوە؟ بە پێی ئەو تۆمارە، من بۆ چەندین دەیە سەردانی ئێرەم کردووە—تەنانەت پێش ئەوەی لەدایک ببم."
-    },
-    {
-    speaker: "کتێبدار",
-    text: "کات لێرە بە شێوەیەکی جیاواز کار دەکات. کتێبخانەکە لە هەموو چرکەساتەکاندا هەیە. تۆش، خوێنەری بەڕێز، لە چەندین ژیاندا زۆر بەردەوام بوویت."
-    },
-    {
-    speaker: "تۆ",
-    text: "بۆچی ناتوانم سەردانە پێشووەکانم بیر بێنمەوە؟ چی بەسەر ئەو کەسانە دێت کە ناگەڕێنەوە؟"
-    },
-    {
-    speaker: "کتێبدار",
-    text: "هەندێک زانیاری بەهایەکی هەیە. مێشک خۆی دەپارێزێت بە بیرچوونەوەی ئەوەی ناتوانێت تێیبگات. سەبارەت بەوانەی ناگەڕێنەوە..."
-    },
-    {
-    speaker: "گێڕەرەوە",
-    text: "ئەو سەیری ڕەفە کتێبەکان دەکات، خەمێکی سەیر لە چاوەکانیدایە."
-    },
-    {
-    speaker: "تۆ",
-    text: "باست لە 'کۆکراوەی تایبەت' کرد. چ جۆرە کتێبێک لەوێ هەڵگیراوە؟"
-    },
-    {
-    speaker: "کتێبدار",
-    text: "ئەوان دەبنە بەشێک لە کۆکراوەکە. لە کۆتاییدا، هەر کتێبێک نووسەرێکی هەیە."
-    }
-    ],
-    choices: [
-    {
-    text: "\"چۆن ئەم بازنەیە بشکێنم و بۆ هەمیشە دەرباز ببم؟\"",
-    nextScene: "ask_escape"
-    },
-    {
-    text: "\"تۆ چیت؟ بە ڕاستی مرۆڤیت؟\"",
-    nextScene: "ask_librarian_nature"
-    },
-    {
-    text: "دەستبەجێ بڕۆ بۆ گەڕان بەدوای کتێبی کۆتایی نەنووسراو",
-    nextScene: "main_hall",
-    condition: "seeking_unwritten_book"
-    }
-    ]
+        id: "meet_librarian_confrontation",
+        background: "scenes/library-desk-scene", // Changed from "scene-reception-desk" to use the new image
+        character: {
+            id: "librarian",
+            emotion: "concerned"
+        },
+        dialogue: [
+            {
+                speaker: "Narrator",
+                text: "You ring the bell firmly. Its tone cuts through the silence like a knife."
+            },
+            {
+                speaker: "Narrator",
+                text: "The librarian appears almost instantly, as if she was waiting just out of sight."
+            },
+            {
+                speaker: "Librarian",
+                text: "Ah, there you are. Back again so soon? You usually take longer to... remember."
+            },
+            {
+                speaker: "You",
+                text: "What have you done to me? According to that ledger, I've been coming here for decades—even before I was born."
+            },
+            {
+                speaker: "Librarian",
+                text: "Time works differently here. The library exists in all moments at once. And you, dear reader, have been quite persistent across many lifetimes."
+            },
+            {
+                speaker: "You",
+                text: "Why can't I remember my previous visits? What happens to people who don't return?"
+            },
+            {
+                speaker: "Librarian",
+                text: "Some knowledge comes at a cost. The mind protects itself by forgetting what it cannot comprehend. As for those who don't return..."
+            },
+            {
+                speaker: "Narrator",
+                text: "She glances toward the bookshelves, a strange sadness in her eyes."
+            },
+            {
+                speaker: "You",
+                text: "You mentioned a 'special collection'. What kind of books are kept there?"
+            },
+            {
+                speaker: "Librarian",
+                text: "They become part of the collection. Every book has an author, after all."
+            }
+        ],
+        choices: [
+            {
+                text: "\"How do I break this cycle and escape for good?\"",
+                nextScene: "ask_escape"
+            },
+            {
+                text: "\"What are you? Are you even human?\"",
+                nextScene: "ask_librarian_nature"
+            },
+            {
+                text: "Leave immediately to search for The Unwritten End",
+                nextScene: "main_hall",
+                condition: "seeking_unwritten_book"
+            }
+        ]
     },
 
     // Main hall scene - enhanced
     "main_hall": {
         id: "main_hall",
-        background: "scene-main-hall",
+        background: "scenes/library-hall-scene", // Changed from "scene-main-hall" to use the new image
         dialogue: [
             {
                 speaker: "گێڕەرەوە",
@@ -704,7 +702,7 @@ const STORY_DATA = {
     // New scene for examining the map
     "examine_map": {
         id: "examine_map",
-        background: "scene-map",
+        background: "items/examine_map", // Changed from "scene-map" to use the new image
         effects: {
             visual: "zoom"
         },
@@ -964,6 +962,45 @@ const STORY_DATA = {
             },
             {
                 text: "Continue exploring the main hall",
+                nextScene: "main_hall"
+            }
+        ]
+    },
+
+    // New scene: Restricted section
+    "restricted_section": {
+        id: "restricted_section",
+        background: "items/restricted_section", // Use the new restricted_section.png image
+        dialogue: [
+            {
+                speaker: "Narrator",
+                text: "You enter the restricted section of the library. The air here feels heavier, charged with an unnatural energy."
+            },
+            {
+                speaker: "Narrator",
+                text: "Ancient tomes line the shelves, their spines adorned with strange symbols. Some appear to glow faintly in the dim light."
+            },
+            {
+                speaker: "Narrator", 
+                text: "The whispers are more distinct here - almost like fragments of conversations from different times and places, all speaking at once."
+            },
+            {
+                speaker: "You",
+                text: "What secrets are hidden in these books? And why do they feel... alive somehow?"
+            }
+        ],
+        choices: [
+            {
+                text: "Search for 'The Unwritten End' book",
+                nextScene: "search_unwritten_end",
+                condition: "seeking_unwritten_book"
+            },
+            {
+                text: "Examine the glowing books more closely",
+                nextScene: "examine_glowing_books"
+            },
+            {
+                text: "Return to the main hall",
                 nextScene: "main_hall"
             }
         ]
