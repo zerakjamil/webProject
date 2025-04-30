@@ -1,3 +1,4 @@
+/* Main styling for Echoes of the Library */
 :root {
     --dark-bg: #0a0a0c;
     --dark-accent: #1a1a24;
@@ -28,9 +29,10 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-color: var(--dark-bg); 
+    background-color: var(--dark-bg); /* Add initial background */
 }
 
+/* Layers for game visuals */
 .background-layer {
     position: absolute;
     top: 0;
@@ -40,7 +42,7 @@ body {
     background-size: cover;
     background-position: center;
     transition: opacity 1s ease-in-out;
-    opacity: 0; 
+    opacity: 0; /* Start layers as transparent */
 }
 
 .character-layer {
@@ -81,6 +83,7 @@ body {
     justify-content: flex-end;
 }
 
+/* Dialog box styling */
 .dialog-box {
     width: 90%;
     max-width: 900px;
@@ -93,23 +96,23 @@ body {
     z-index: 999;
 }
 
+/* Character Portrait in Dialog Box */
 .speaker-portrait {
     position: absolute;
-    bottom: calc(100% + 10px);
-    right: 120px;
-    width: 180px; 
+    bottom: calc(100% + 10px); /* Adjusted to snap the bottom of the portrait to the top of the dialog box with a gap */
+    right: 120px; /* Moved further to the left */
+    width: 180px;
     height: 240px;
     overflow: hidden;
-    display: none; 
-    transition: opacity 0.3s ease-in-out; 
-    animation: portrait-appear 0.3s ease-out forwards;
+    display: none; /* Initially hidden */
+    margin-bottom: 0; /* Removed unnecessary adjustment */
 }
 
 .speaker-portrait img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    object-position: center bottom;
+    object-fit: contain; /* Ensure whole image is visible */
+    object-position: center bottom; /* Position from bottom */
 }
 
 .speaker {
@@ -129,6 +132,7 @@ body {
     min-height: 5rem;
 }
 
+/* Choice buttons */
 .choices-container {
     width: 80%;
     max-width: 800px;
@@ -136,7 +140,7 @@ body {
     flex-direction: column;
     gap: 0.8rem;
     margin-bottom: 2rem;
-    z-index: 1000; 
+    z-index: 1000; /* Ensure choices appear above other elements */
 }
 
 .choice-btn {
@@ -155,6 +159,7 @@ body {
     transform: translateX(10px);
 }
 
+/* Game menu */
 .game-menu {
     position: absolute;
     top: 1rem;
@@ -178,6 +183,7 @@ body {
     color: var(--dark-bg);
 }
 
+/* Splash Screen Styles */
 .splash-screen {
     position: fixed;
     top: 0;
@@ -220,15 +226,16 @@ body {
 }
 
 #start-game:hover {
-    background-color: #b87a4a;
+    background-color: #b87a4a; /* Slightly darker highlight */
 }
 
+/* Saved Indicator Styles */
 .saved-indicator {
     position: fixed;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(145, 95, 51, 0.8);
+    background-color: rgba(145, 95, 51, 0.8); /* Highlight color with alpha */
     color: var(--text-color);
     padding: 10px 20px;
     border-radius: 5px;
@@ -238,6 +245,7 @@ body {
     font-family: var(--font-gothic);
 }
 
+/* Special effects */
 .flicker {
     animation: flicker 0.5s infinite alternate;
 }
@@ -277,11 +285,12 @@ body {
     50% { opacity: 0.4; }
 }
 
+/* Media queries for responsiveness */
 @media (max-width: 768px) {
     .dialog-box {
         width: 95%;
         padding: 1rem;
-        z-index: 999;
+        z-index: 999; /* Fix the incomplete z-index property */
         margin-bottom: 1rem;
     }
     
@@ -301,6 +310,7 @@ body {
     }
 }
 
+/* Next Button Styling */
 .next-btn {
     position: absolute;
     bottom: 10px;
@@ -313,7 +323,7 @@ body {
     font-family: var(--font-gothic);
     cursor: pointer;
     transition: all 0.2s ease;
-    display: none;
+    display: none; /* Hidden by default, shown when dialogue is complete */
 }
 
 .next-btn:hover {
@@ -327,6 +337,7 @@ body {
     font-size: 0.8em;
 }
 
+/* Animation for the next button */
 @keyframes pulse-button {
     0%, 100% { opacity: 0.9; }
     50% { opacity: 1; }
