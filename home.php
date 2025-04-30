@@ -354,7 +354,7 @@
 <body>
     <div class="title-container">
         <!-- Title image that fills the screen -->
-        <img src="assets/images/characters/page-home.png" alt="Echoes of the Library" class="title-image">
+        <img src="assets/images/scenes/page-home.png" alt="Echoes of the Library" class="title-image">
         
         <!-- Vignette overlay -->
         <div class="vignette"></div>
@@ -381,7 +381,7 @@
                 </div>
                 <!-- Creepy ghost image in background -->
                 <div class="ghost-container">
-                    <img src="assets/images/characters/ghost-girl.png" alt="" class="ghost-img">
+                    <img src="assets/images/characters/ghost-girl/ghost-girl.png" alt="" class="ghost-img">
                 </div>
             </div>
         </div>
@@ -543,5 +543,3 @@
     </script>
 </body>
 </html>
-```
-</copilot-edited-file>

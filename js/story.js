@@ -3,7 +3,7 @@ const STORY_DATA = {
     // Starting scene: Library entrance
     "entrance": {
         id: "entrance",
-        background: "scene-library-detailed",
+        background: "items/Library", // Changed from "scene-library-detailed" to use the Library.png image
         dialogue: [
             {
                 speaker: "Narrator",
@@ -57,7 +57,7 @@ const STORY_DATA = {
     // Try to leave scene
     "try_leave": {
         id: "try_leave",
-        background: "scene-library-detailed",
+        background: "items/door", // Changed to use the door.png image from items folder
         effects: {
             visual: "flicker"
         },
@@ -102,7 +102,7 @@ const STORY_DATA = {
     // Reception desk scene
     "reception": {
         id: "reception",
-        background: "scene-reception-desk",
+        background: "scenes/library-desk-scene", // Changed from "scene-reception-desk" to use the new image
         dialogue: [
             {
                 speaker: "Narrator",
@@ -191,7 +191,7 @@ const STORY_DATA = {
     // Reception desk scene - enhanced
     "reception": {
         id: "reception",
-        background: "scene-reception-desk",
+        background: "scenes/library-desk-scene", // Changed from "scene-reception-desk" to use the new image
         dialogue: [
             {
                 speaker: "Narrator",
@@ -233,7 +233,7 @@ const STORY_DATA = {
     // New scene: Newspaper clipping
     "newspaper_clipping": {
         id: "newspaper_clipping",
-        background: "scene-reception-desk",
+        background: "scenes/library-desk-scene", // Changed from "scene-reception-desk" to use the new image
         effects: {
             visual: "zoom"
         },
@@ -270,7 +270,7 @@ const STORY_DATA = {
     // Enhanced ledger examination scene
     "examine_ledger": {
         id: "examine_ledger",
-        background: "scene-reception-desk",
+        background: "scenes/library-desk-scene", // Changed from "scene-reception-desk" to use the new image
         effects: {
             visual: "flicker"
         },
@@ -329,7 +329,7 @@ const STORY_DATA = {
     // Scene for finding your history
     "find_your_history": {
         id: "find_your_history",
-        background: "scene-reception-desk",
+        background: "scenes/library-desk-scene", // Changed from "scene-reception-desk" to use the new image
         effects: {
             visual: "flashback"
         },
@@ -375,7 +375,7 @@ const STORY_DATA = {
     // Scene for examining an ancient tome
     "examine_tome": {
         id: "examine_tome",
-        background: "scene-reception-desk",
+        background: "items/examine_tome", // Changed from "scenes/library-desk-scene" to use the new image
         effects: {
             visual: "zoom"
         },
@@ -415,7 +415,7 @@ const STORY_DATA = {
     // New scene: Finding your notes
     "find_notes": {
         id: "find_notes",
-        background: "scene-reception-desk",
+        background: "scenes/library-desk-scene", // Changed from "scene-reception-desk" to use the new image
         dialogue: [
             {
                 speaker: "Narrator",
@@ -446,7 +446,7 @@ const STORY_DATA = {
     // Scene for following whispers
     "follow_whispers": {
         id: "follow_whispers",
-        background: "scene-restricted-section",
+        background: "items/restricted_section", // Changed from "scene-restricted-section" to use the new image
         dialogue: [
             {
                 speaker: "Narrator",
@@ -488,7 +488,7 @@ const STORY_DATA = {
     // Enhanced Meet the Librarian scene
     "meet_librarian": {
         id: "meet_librarian",
-        background: "scene-reception-desk",
+        background: "scenes/library-desk-scene", // Changed from "scene-reception-desk" to use the new image
         character: {
             id: "librarian",
             emotion: "neutral"
@@ -538,7 +538,7 @@ const STORY_DATA = {
     // Scene for asking about the door
     "ask_door": {
         id: "ask_door",
-        background: "scene-reception-desk",
+        background: "scenes/library-desk-scene", // Changed from "scene-reception-desk" to use the new image
         character: {
             id: "librarian",
             emotion: "neutral"
@@ -580,7 +580,7 @@ const STORY_DATA = {
     // New scene for confronting librarian
     "meet_librarian_confrontation": {
         id: "meet_librarian_confrontation",
-        background: "scene-reception-desk",
+        background: "scenes/library-desk-scene", // Changed from "scene-reception-desk" to use the new image
         character: {
             id: "librarian",
             emotion: "concerned"
@@ -647,7 +647,7 @@ const STORY_DATA = {
     // Main hall scene - enhanced
     "main_hall": {
         id: "main_hall",
-        background: "scene-main-hall",
+        background: "scenes/library-hall-scene", // Changed from "scene-main-hall" to use the new image
         dialogue: [
             {
                 speaker: "Narrator",
@@ -703,7 +703,7 @@ const STORY_DATA = {
     // New scene for examining the map
     "examine_map": {
         id: "examine_map",
-        background: "scene-map",
+        background: "items/examine_map", // Changed from "scene-map" to use the new image
         effects: {
             visual: "zoom"
         },
@@ -925,6 +925,45 @@ const STORY_DATA = {
             },
             {
                 text: "Continue exploring the main hall",
+                nextScene: "main_hall"
+            }
+        ]
+    },
+
+    // New scene: Restricted section
+    "restricted_section": {
+        id: "restricted_section",
+        background: "items/restricted_section", // Use the new restricted_section.png image
+        dialogue: [
+            {
+                speaker: "Narrator",
+                text: "You enter the restricted section of the library. The air here feels heavier, charged with an unnatural energy."
+            },
+            {
+                speaker: "Narrator",
+                text: "Ancient tomes line the shelves, their spines adorned with strange symbols. Some appear to glow faintly in the dim light."
+            },
+            {
+                speaker: "Narrator", 
+                text: "The whispers are more distinct here - almost like fragments of conversations from different times and places, all speaking at once."
+            },
+            {
+                speaker: "You",
+                text: "What secrets are hidden in these books? And why do they feel... alive somehow?"
+            }
+        ],
+        choices: [
+            {
+                text: "Search for 'The Unwritten End' book",
+                nextScene: "search_unwritten_end",
+                condition: "seeking_unwritten_book"
+            },
+            {
+                text: "Examine the glowing books more closely",
+                nextScene: "examine_glowing_books"
+            },
+            {
+                text: "Return to the main hall",
                 nextScene: "main_hall"
             }
         ]

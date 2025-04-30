@@ -304,7 +304,17 @@ class GameEngine {
                 }
             } else if (backgroundId) {
                 // Use image-based background
-                const imageUrl = `assets/images/backgrounds/${backgroundId}.jpg`;
+                let imageUrl;
+                
+                // Check if backgroundId contains a directory path or is a specific item
+                if (backgroundId.includes('/') || backgroundId.startsWith('items/')) {
+                    // Use the path as provided with png extension
+                    imageUrl = `assets/images/${backgroundId}.png`;
+                } else {
+                    // Standard background, use default path
+                    imageUrl = `assets/images/backgrounds/${backgroundId}.jpg`;
+                }
+                
                 console.log(`Setting image background: ${imageUrl}`);
                 newBg.style.backgroundImage = `url('${imageUrl}')`;
 
