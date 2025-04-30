@@ -1,60 +1,59 @@
-// Story data for Echoes of the Library
+// زانیاری چیرۆکی دەنگدانەوەکانی کتێبخانە
 const STORY_DATA = {
-    // Starting scene: Library entrance
+    // دیمەنی سەرەتا: دەروازەی کتێبخانە
     "entrance": {
-        id: "entrance",
-        background: "scene-library-detailed",
-        dialogue: [
-            {
-                speaker: "Narrator",
-                text: "The rain pours heavily outside as you rush toward the old library, seeking shelter from the storm."
-            },
-            {
-                speaker: "Narrator",
-                text: "The ancient wooden door creaks open reluctantly, as if warning you against entering."
-            },
-            {
-                speaker: "Narrator",
-                text: "Something about this place feels familiar, though you're certain you've never been here before."
-            },
-            {
-                speaker: "Narrator",
-                text: "Inside, the air is thick with dust and the scent of old books. The library seems unnaturally empty."
-            },
-            {
-                speaker: window.playerName || "You",
-                text: "Hello? Is anyone here? I just need somewhere to wait out the storm..."
-            },
-            {
-                speaker: "Narrator",
-                text: "Your voice echoes through the vast hall. No response comes, save for the distant rumble of thunder."
-            },
-            {
-                speaker: "Narrator",
-                text: "A strange sensation washes over you—a feeling that the books are somehow aware of your presence."
-            }
-        ],
-        nextScene: "main_hall",
-        effects: {
-            visual: "flicker"
-        },
-        choices: [
-            {
-                text: "Explore deeper into the library",
-                nextScene: "main_hall"
-            },
-            {
-                text: "Check the reception desk for a librarian",
-                nextScene: "reception"
-            },
-            {
-                text: "Maybe I should leave and find somewhere else...",
-                nextScene: "try_leave"
-            }
-        ]
+    id: "entrance",
+    background: "scene-library-detailed",
+    dialogue: [
+    {
+    speaker: "گێڕەرەوە",
+    text: "باران بە توندی دەبارێت لە دەرەوە، کاتێک بە پەلە بەرەو کتێبخانە کۆنەکە ڕادەکەیت، بە دوای پەناگایەک لە ڕەشەباکە."
     },
-
-    // Try to leave scene
+    {
+    speaker: "گێڕەرەوە",
+    text: "دەرگا کۆنە دارینەکە بە ناڕەزایی دەکرێتەوە، وەک ئەوەی هۆشدارت بداتێ لە چوونەژوورەوە."
+    },
+    {
+    speaker: "گێڕەرەوە",
+    text: "شتێک سەبارەت بەم شوێنە هەست بە ئاشنایی دەکات، هەرچەندە دڵنیایت کە پێشتر نەهاتوویتە ئێرە."
+    },
+    {
+    speaker: "گێڕەرەوە",
+    text: "لە ناوەوە، هەوا چڕە بە تۆز و بۆنی کتێبی کۆن. کتێبخانەکە بە شێوەیەکی نائاسایی چۆڵە."
+    },
+    {
+    speaker: "تۆ",
+    text: "ساڵو؟ کەس لێرە نییە؟ من تەنها پێویستم بە شوێنێکە بۆ چاوەڕێ کردنی کۆتایی ڕەشەباکە..."
+    },
+    {
+    speaker: "گێڕەرەوە",
+    text: "دەنگت لە هۆڵە فراوانەکە دەنگ دەداتەوە. هیچ وەڵامێک نایەت، جگە لە گرمەی دوورەدەستی هەورە تریشقە."
+    },
+    {
+    speaker: "گێڕەرەوە",
+    text: "هەستێکی سەیر داتدەگرێت—هەستێک کە کتێبەکان بە جۆرێک ئاگادارن لە بوونی تۆ."
+    }
+    ],
+    nextScene: "main_hall",
+    effects: {
+    visual: "flicker"
+    },
+    choices: [
+    {
+    text: "زیاتر قووڵ ببەرەوە ناو کتێبخانەکە",
+    nextScene: "main_hall"
+    },
+    {
+    text: "مێزی پێشوازی بپشکنە بۆ دۆزینەوەی کتێبدارێک",
+    nextScene: "reception"
+    },
+    {
+    text: "باشترە دەربچم و شوێنێکی تر بدۆزمەوە...",
+    nextScene: "try_leave"
+    }
+    ]
+    },
+    // هەوڵدان بۆ دەرچوون
     "try_leave": {
         id: "try_leave",
         background: "scene-library-detailed",
@@ -63,81 +62,81 @@ const STORY_DATA = {
         },
         dialogue: [
             {
-                speaker: "Narrator",
-                text: "The door you just came through is now... different. Older. Made of dark wood with strange symbols carved into its frame."
+                speaker: "گێڕەرەوە",
+                text: "دەرگاکە کە هەر ئێستا لێوەی هاتیتە ژوورەوە ئێستا... جیاوازە. کۆنترە. دروستکراوە لە داری تاریک و هێمای سەیر لەسەر چوارچێوەکەی هەڵکەندراوە."
             },
             {
-                speaker: "Narrator",
-                text: "As you turn to leave, a deafening crack of thunder shakes the building. The lights flicker ominously."
+                speaker: "گێڕەرەوە",
+                text: "کاتێک دەگەڕێیتەوە بۆ دەرچوون، هەورە تریشقەیەکی بەهێز بیناکە دەهەژێنێت. گڵۆپەکان بە شێوەیەکی ترسناک دەکوژێنەوە و دادەگیرسێنەوە."
             },
             {
-                speaker: "You",
-                text: "What the...? This isn't the door I came through. And these symbols..."
+                speaker: "تۆ",
+                text: "ئەمە چییە...؟ ئەمە ئەو دەرگایە نییە کە پێی هاتمە ژوورەوە. ئەم هێمایانەش..."
             },
             {
-                speaker: "Narrator",
-                text: "You try the handle, but it won't budge. It seems you have no choice but to venture deeper into the library."
+                speaker: "گێڕەرەوە",
+                text: "هەوڵ دەدەیت دەستەکە بجووڵێنیت، بەڵام ناجووڵێت. وا دیارە هیچ بژاردەیەکت نییە جگە لە چوونە ناو قووڵایی کتێبخانەکە."
             },
             {
-                speaker: "Narrator",
-                text: "You recognize some of the symbols from your research into ancient languages, but they shouldn't exist together—they span thousands of years and disparate cultures."
+                speaker: "گێڕەرەوە",
+                text: "هەندێک لە هێماکان لە توێژینەوەکانت لەسەر زمانە کۆنەکان دەناسیتەوە، بەڵام نابێت لەگەڵ یەکتر بن—چەندین هەزار ساڵ و کەلتووری جیاواز لەخۆ دەگرن."
             }
         ],
         choices: [
             {
-                text: "Explore deeper into the library",
+                text: "زیاتر قووڵ ببەرەوە ناو کتێبخانەکە",
                 nextScene: "main_hall"
             },
             {
-                text: "Check the reception desk for a librarian",
+                text: "مێزی پێشوازی بپشکنە بۆ دۆزینەوەی کتێبدارێک",
                 nextScene: "reception"
             },
             {
-                text: "Leave and find somewhere else...",
+                text: "دەربچۆ و شوێنێکی تر بدۆزەوە...",
                 nextScene: "try_leave"
             }
         ]
     },
-
-    // Reception desk scene
+    
+    // دیمەنی مێزی پێشوازی
     "reception": {
         id: "reception",
         background: "scene-reception-desk",
         dialogue: [
             {
-                speaker: "Narrator",
-                text: "The reception desk is covered in a thin layer of dust. A vintage bell sits on the counter."
+                speaker: "گێڕەرەوە",
+                text: "مێزی پێشوازی داپۆشراوە بە چینێکی تەنک لە تۆز. زەنگێکی کۆن لەسەر پێشخانەکە دانراوە."
             },
             {
-                speaker: "Narrator",
-                text: "Beside it lies an open ledger, its pages yellowed with age. The last entry date is from over 50 years ago."
+                speaker: "گێڕەرەوە",
+                text: "لە تەنیشتی، دەفتەرێکی کراوە هەیە کە لاپەڕەکانی بە تێپەڕبوونی کات زەرد بوونە. دوا بەرواری تۆمارکراو هی زیاتر لە ٥٠ ساڵ پێشە."
             },
             {
-                speaker: "You",
-                text: "That can't be right... the library couldn't have been closed for that long."
+                speaker: "تۆ",
+                text: "ئەمە ناکرێت ڕاست بێت... کتێبخانەکە ناکرێت ئەوەندە ماوەیە داخرابێت."
             },
             {
-                text: "Examine the symbols on the door more closely",
+                text: "هێماکانی سەر دەرگاکە بە وردی بپشکنە",
                 nextScene: "examine_door_symbols"
             }
         ],
         choices: [
             {
-                text: "Explore deeper into the library and learn more",
+                text: "قووڵتر بڕۆ ناو کتێبخانەکە و زیاتر فێر ببە",
                 nextScene: "main_hall"
             },
             {
-                text: "Check the reception desk for answers",
+                text: "مێزی پێشوازی بپشکنە بۆ دۆزینەوەی وەڵام",
                 nextScene: "reception"
             },
             {
-                text: "Ring the bell",
+                text: "زەنگەکە لێ بدە",
                 nextScene: "meet_librarian"
             }
         ]
     },
-
-    // New scene: Examining door symbols
+    
+    // دیمەنی نوێ: پشکنینی هێماکانی دەرگا
     "examine_door_symbols": {
         id: "examine_door_symbols",
         background: "scene-library-detailed",
@@ -146,91 +145,91 @@ const STORY_DATA = {
         },
         dialogue: [
             {
-                speaker: "Narrator",
-                text: "You lean closer to the symbols, tracing their outlines with your fingers. The wood feels unnaturally warm."
+                speaker: "گێڕەرەوە",
+                text: "نزیکتر دەبیتەوە لە هێماکان، شوێنی هێڵەکانیان بە پەنجەکانت دیاری دەکەیت. دارەکە هەست بە گەرمییەکی نائاسایی دەکات."
             },
             {
-                speaker: "Narrator",
-                text: "As your fingers trace the final symbol, a jolt of energy runs through your body. For a brief moment, you see flashes of other visitors—dozens of them throughout different eras—all touching these same symbols."
+                speaker: "گێڕەرەوە",
+                text: "کاتێک پەنجەکانت دوا هێما دیاری دەکەن، تەزوویەک لە وزە بە ناو جەستەت دەڕوات. بۆ ساتێکی کورت، کورتە دیمەنی سەردانکەرانی تر دەبینیت—دەیان کەس لە سەردەمە جیاوازەکان—هەموویان هەمان ئەم هێمایانە دەست لێ دەدەن."
             },
             {
-                speaker: "Narrator",
-                text: "In each vision, the visitors look increasingly desperate as they return to this door again and again, growing older while the library remains unchanged."
+                speaker: "گێڕەرەوە",
+                text: "لە هەر دیمەنێک، سەردانکەران زیاتر بێهیوا دیارن کاتێک دەگەڕێنەوە بۆ ئەم دەرگایە بە بەردەوامی، بەرەو پیربوون دەچن لەکاتێکدا کتێبخانەکە وەک خۆی دەمێنێتەوە."
             },
             {
-                speaker: "You",
-                text: "These dates can't be right... the last entry is from 1973. They were trapped here... just like I might be now."
+                speaker: "تۆ",
+                text: "ئەم بەروارانە ناکرێت ڕاست بن... دوا تۆمار هی ساڵی ١٩٧٣ـە. ئەوان لێرە گیریان خواردبوو... وەک من کە ئێستا لەوانەیە گیرم خواردبێت."
             },
             {
-                speaker: "Narrator",
-                text: "As you flip through the pages, you notice something strange. The names begin to repeat across decades, with identical handwriting."
+                speaker: "گێڕەرەوە",
+                text: "کاتێک لاپەڕەکان هەڵدەدەیتەوە، شتێکی سەیر دەبینیت. ناوەکان دەست دەکەن بە دووبارە بوونەوە لە ماوەی چەندین دەیە، بە هەمان خەتی دەست."
             },
             {
-                speaker: "Narrator",
-                text: "You notice something etched into the doorframe—a small inscription that reads: 'Knowledge is the only way out.'"
+                speaker: "گێڕەرەوە",
+                text: "شتێک دەبینیت کە لەسەر چوارچێوەی دەرگاکە هەڵکەندراوە—نووسینێکی بچووک کە دەڵێت: 'زانیاری تەنها ڕێگای دەرچوونە.'"
             }
         ],
         choices: [
             {
-                text: "Even stranger, some of the borrowers' names have odd notes beside them: 'Never returned,' 'Found only the cover,' or most disturbing: 'Returned different.'",
+                text: "سەیرتر، هەندێک لە ناوی قەرزکەرەکان تێبینی سەیریان لەتەنیشتە: 'هەرگیز نەگەڕاوەتەوە'، 'تەنها بەرگەکە دۆزرایەوە'، یان ترسناکترینیان: 'جیاواز گەڕاوەتەوە'.",
                 nextScene: "main_hall",
                 storyFlag: "seeking_history"
             },
             {
-                text: "Look for the librarian who might have answers",
+                text: "بەدوای کتێبدارێکدا بگەڕێ کە لەوانەیە وەڵامی لا بێت",
                 nextScene: "reception"
             },
             {
-                text: "Try to find another exit",
+                text: "هەوڵبدە دەرچوونێکی تر بدۆزیتەوە",
                 nextScene: "main_hall",
                 storyFlag: "seeking_exit"
             }
         ]
     },
-
-    // Reception desk scene - enhanced
+    
+    // دیمەنی مێزی پێشوازی - پێشکەوتوو
     "reception": {
         id: "reception",
         background: "scene-reception-desk",
         dialogue: [
             {
-                speaker: "Narrator",
-                text: "The reception desk is covered in a thin layer of dust. A vintage brass bell sits on the counter."
+                speaker: "گێڕەرەوە",
+                text: "مێزی پێشوازی داپۆشراوە بە چینێکی تەنک لە تۆز. زەنگێکی برۆنزی کۆن لەسەر پێشخانەکە دانراوە."
             },
             {
-                speaker: "Narrator",
-                text: "Beside it lies an open ledger, its pages yellowed with age. The last entry date is from over 50 years ago."
+                speaker: "گێڕەرەوە",
+                text: "لە تەنیشتی، دەفتەرێکی کراوە هەیە کە لاپەڕەکانی بە تێپەڕبوونی کات زەرد بوونە. دوا بەرواری تۆمارکراو هی زیاتر لە ٥٠ ساڵ پێشە."
             },
             {
-                speaker: "You",
-                text: "That can't be right... the library couldn't have been closed for that long. This building would be condemned."
+                speaker: "تۆ",
+                text: "ئەمە ناکرێت ڕاست بێت... کتێبخانەکە ناکرێت ئەوەندە ماوەیە داخرابێت. ئەم بینایە دەبێت ڕووخابایە."
             },
             {
-                speaker: "Narrator",
-                text: "You notice a small framed photograph on the desk. It shows the library's exterior, but the surrounding buildings look different—like a snapshot from another era."
+                speaker: "گێڕەرەوە",
+                text: "وێنەیەکی چوارچێوەکراوی بچووک لەسەر مێزەکە دەبینیت. دەرەوەی کتێبخانەکە پیشان دەدات، بەڵام بیناکانی دەوروبەر جیاوازن—وەک گرتەیەک لە سەردەمێکی تر."
             },
             {
-                speaker: "You",
-                text: "Ring the bell to call the librarian"
+                speaker: "تۆ",
+                text: "زەنگەکە لێ بدە بۆ بانگکردنی کتێبدار"
             }
         ],
         choices: [
             {
-                text: "Ring the bell",
+                text: "زەنگەکە لێ بدە",
                 nextScene: "meet_librarian"
             },
             {
-                text: "Examine the ledger more closely",
+                text: "دەftەرەکە بە وردتر بپشکنە",
                 nextScene: "examine_ledger"
             },
             {
-                text: "Read the newspaper clipping",
+                text: "بڕوانامەی ڕۆژنامەکە بخوێنەوە",
                 nextScene: "newspaper_clipping"
             }
         ]
     },
-
-    // New scene: Newspaper clipping
+    
+    // دیمەنی نوێ: بڕوانامەی ڕۆژنامە
     "newspaper_clipping": {
         id: "newspaper_clipping",
         background: "scene-reception-desk",
@@ -239,35 +238,35 @@ const STORY_DATA = {
         },
         dialogue: [
             {
-                speaker: "Narrator",
-                text: "You pick up the newspaper clipping and read the article carefully."
+                speaker: "گێڕەرەوە",
+                text: "بڕوانامەی ڕۆژنامەکە هەڵدەگریت و وتارەکە بە وردی دەخوێنیتەوە."
             },
             {
-                speaker: "Narrator",
-                text: "'The Aeternum Library celebrates an unprecedented 300 years of continuous operation this week. Founded in 1723, the library has survived fires, wars, and economic downturns without ever closing its doors.'"
+                speaker: "گێڕەرەوە",
+                text: "'کتێبخانەی ئێتێرنوم ئەم هەفتەیە یادی ٣٠٠ ساڵ لە کارکردنی بەردەوامی بێ پچڕان دەکاتەوە. دامەزرێنراوە لە ساڵی ١٧٢٣، کتێبخانەکە لە ئاگر، شەڕ و داڕمانی ئابووری ڕزگاری بووە بەبێ داخستنی دەرگاکانی.'"
             },
             {
-                speaker: "Narrator",
-                text: "'Perhaps most remarkable is the library's unique collection of rare texts and its unusual architecture, which locals describe as 'larger on the inside than outside.'''"
+                speaker: "گێڕەرەوە",
+                text: "'لەوانەیە سەرنجڕاکێشترین شت کۆکراوەی تایبەتی دەگمەنی کتێبخانە بێت و تەلارسازی نائاسایی، کە خەڵکی ناوچەکە وەسفی دەکەن وەک 'لە ناوەوە گەورەتر لە دەرەوە'.'"
             },
             {
-                speaker: "Narrator",
-                text: "'Current head librarian, Ms. E. Blackwood, who has overseen the collection for 'longer than anyone can remember,' credits the library's success to its 'devoted readers.''"
+                speaker: "گێڕەرەوە",
+                text: "'سەرۆکی ئێستای کتێبخانەکە، خاتوو ئێ. بلاکوود، کە 'لە بیرەوەری هەموان زیاتر' سەرپەرشتی کۆکراوەکەی کردووە، سەرکەوتنی کتێبخانەکە دەگەڕێنێتەوە بۆ 'خوێنەرە دڵسۆزەکان'.'"
             }
         ],
         choices: [
             {
-                text: "Longer than anyone can remember? That can't be literally true...",
+                text: "لە بیرەوەری هەموان زیاتر؟ ئەمە ناکرێت بە واتای وشەکان ڕاست بێت...",
                 nextScene: "main_hall"
             },
             {
-                text: "You flip over the clipping and notice handwriting on the back: 'They always return. The library calls them back.'",
+                text: "بڕوانامەکە هەڵدەگێڕیتەوە و دەستخەتێک لە پشتەوەی تێبینی دەکەیت: 'هەمیشە دەگەڕێنەوە. کتێبخانەکە بانگیان دەکاتەوە.'",
                 nextScene: "main_hall"
             }
         ]
     },
-
-    // Enhanced ledger examination scene
+    
+    // دیمەنی پێشکەوتووی پشکنینی دەftەر
     "examine_ledger": {
         id: "examine_ledger",
         background: "scene-reception-desk",
@@ -276,57 +275,57 @@ const STORY_DATA = {
         },
         dialogue: [
             {
-                speaker: "Narrator",
-                text: "You lean closer to examine the ancient ledger. The yellowed pages are filled with elegant handwriting, recording names and dates."
+                speaker: "گێڕەرەوە",
+                text: "نزیکتر دەبیتەوە بۆ پشکنینی دەftەرە کۆنەکە. لاپەڕە زەردبووەکان پڕن لە دەستخەتی جوان، کە ناو و بەروار تۆمار دەکەن."
             },
             {
-                speaker: "Narrator",
-                text: "These dates can't be right... the entries span centuries, but the handwriting is identical throughout."
+                speaker: "گێڕەرەوە",
+                text: "ئەم بەروارانە ناکرێت ڕاست بن... تۆمارەکان چەندین سەدە دەگرنەوە، بەڵام دەستخەتەکە لە هەمووی یەکسانە."
             },
             {
-                speaker: "Narrator",
-                text: "As you flip through the pages, you notice something strange. The names begin to repeat across decades, with visitors returning multiple times throughout their lives."
+                speaker: "گێڕەرەوە",
+                text: "کاتێک لاپەڕەکان هەڵدەدەیتەوە، شتێکی سەیر دەبینیت. ناوەکان لە ماوەی چەندین دەیە دەست دەکەن بە دووبارەبوونەوە، لەگەڵ گەڕانەوەی سەردانکەران چەندین جار لە ماوەی ژیانیان."
             },
             {
-                speaker: "Narrator",
-                text: "Even stranger, some of the borrowers' names have odd notes beside them: 'Never returned,' 'Found only the cover,' or most disturbing: 'Returned different.'"
+                speaker: "گێڕەرەوە",
+                text: "سەیرتر، هەندێک لە ناوی قەرزکەرەکان تێبینی سەیریان لەتەنیشتە: 'هەرگیز نەگەڕاوەتەوە'، 'تەنها بەرگەکە دۆزرایەوە'، یان ترسناکترینیان: 'جیاواز گەڕاوەتەوە'."
             },
             {
-                speaker: "You",
-                text: "What kind of library is this...?"
+                speaker: "تۆ",
+                text: "ئەمە چ جۆرە کتێبخانەیەکە...؟"
             },
             {
-                speaker: "Narrator",
-                text: "A chill runs down your spine as you notice your own name written at the bottom of the page, dated today, with a blank space beside it waiting to be filled."
+                speaker: "گێڕەرەوە",
+                text: "سەرمایەک بە پشتتدا دێت کاتێک ناوی خۆت لە خوارەوەی لاپەڕەکە دەبینیت، بە بەرواری ئەمڕۆ، لەگەڵ بۆشاییەک لە تەنیشتی کە چاوەڕێ دەکات پڕ بکرێتەوە."
             },
             {
-                speaker: "Narrator",
-                text: "The whispers grow louder as you approach a section cordoned off with worn velvet ropes."
+                speaker: "گێڕەرەوە",
+                text: "چرپەکان بەرزتر دەبن کاتێک نزیک دەبیتەوە لە بەشێک کە بە پەتی مەخمەلی کۆن دیاری کراوە."
             },
             {
-                speaker: "Narrator",
-                text: "Above the entrance, a faded sign reads: 'Restricted Section - Authorized Personnel Only'."
+                speaker: "گێڕەرەوە",
+                text: "لە سەرەوەی دەروازەکە، تابلۆیەکی کاڵبووە نووسراوە: 'بەشی قەدەغەکراو - تەنها کارمەندانی ڕێگەپێدراو'."
             }
         ],
         choices: [
             {
-                text: "Enter the restricted section",
+                text: "بچۆ ناو بەشی قەدەغەکراو",
                 nextScene: "inside_restricted"
             },
             {
-                text: "Look for your name in earlier entries",
+                text: "بەدوای ناوی خۆت بگەڕێ لە تۆمارە کۆنترەکان",
                 nextScene: "find_your_history",
                 storyFlag: "saw_your_name"
             },
             {
-                text: "Ring the bell to confront the librarian",
+                text: "زەنگەکە لێ بدە بۆ بەرەنگاربوونەوەی کتێبدار",
                 nextScene: "meet_librarian_confrontation",
                 storyFlag: "saw_your_name"
             }
         ]
     },
-
-    // Scene for finding your history
+    
+    // دیمەنی دۆزینەوەی مێژووی خۆت
     "find_your_history": {
         id: "find_your_history",
         background: "scene-reception-desk",
@@ -335,44 +334,44 @@ const STORY_DATA = {
         },
         dialogue: [
             {
-                speaker: "Narrator",
-                text: "Strange symbols glow faintly along the spines of some books, pulsing like a heartbeat."
+                speaker: "گێڕەرەوە",
+                text: "هێمای سەیر بە کزی دەدرەوشێنەوە لە پشتی هەندێک کتێب، وەک لێدانی دڵ دەلەرنەوە."
             },
             {
-                speaker: "Narrator",
-                text: "With trembling fingers, you flip back through the ledger, scanning for your name in earlier entries."
+                speaker: "گێڕەرەوە",
+                text: "بە پەنجەی لەرزۆک، دەفتەرەکە بەرەو دواوە هەڵدەدەیتەوە، بەدوای ناوی خۆت دەگەڕێیت لە تۆمارە کۆنترەکان."
             },
             {
-                speaker: "Narrator",
-                text: "There—five years ago. Your name appears with the note: 'Borrowed: Cartography of Dreams. Returned: On time.'"
+                speaker: "گێڕەرەوە",
+                text: "ئەوەتا—پێنج ساڵ پێش. ناوەکەت دەردەکەوێت لەگەڵ تێبینی: 'قەرز کراوە: نەخشەسازی خەونەکان. گەڕاوەتەوە: لە کاتی خۆی.'"
             },
             {
-                speaker: "Narrator",
-                text: "Ten years before that, another entry: 'Borrowed: Principles of Memory Manipulation. Returned: Reader claimed pages were blank.'"
+                speaker: "گێڕەرەوە",
+                text: "دە ساڵ پێش ئەوە، تۆمارێکی تر: 'قەرز کراوە: بنەماکانی دەستکاریکردنی بیرەوەری. گەڕاوەتەوە: خوێنەر دەڵێت لاپەڕەکان بەتاڵ بوون.'"
             },
             {
-                speaker: "Narrator",
-                text: "And earliest of all, thirty years ago—before you were even born: 'Borrowed: The Architecture of Time. Note: Reader promised to return.'"
+                speaker: "گێڕەرەوە",
+                text: "کۆنترینیان، سی ساڵ پێش—پێش لەدایکبوونی تۆ: 'قەرز کراوە: تەلارسازی کات. تێبینی: خوێنەر بەڵێنی دا بگەڕێتەوە.'"
             },
             {
-                speaker: "You",
-                text: "This is impossible. I would remember coming here. Unless..."
+                speaker: "تۆ",
+                text: "ئەمە مەحاڵە. من دەبوو بیرم لە هاتنە ئێرە بێت. مەگەر..."
             }
         ],
         choices: [
             {
-                text: "Examine an ancient tome with glowing symbols",
+                text: "تۆمارێکی کۆن بپشکنە کە هێمای پێوە درەوشاوەیە",
                 nextScene: "examine_tome"
             },
             {
-                speaker: "You",
-                text: "Follow the sound of whispers",
+                speaker: "تۆ",
+                text: "دوای دەنگی چرپەکان بکەوە",
                 nextScene: "follow_whispers"
             }
         ]
     },
-
-    // Scene for examining an ancient tome
+    
+    // دیمەنی پشکنینی تۆمارێکی کۆن
     "examine_tome": {
         id: "examine_tome",
         background: "scene-reception-desk",
@@ -381,38 +380,38 @@ const STORY_DATA = {
         },
         dialogue: [
             {
-                speaker: "Narrator",
-                text: "Suddenly, fragments of memory resurface—sitting at these same tables, walking these same aisles, but with different clothes, different hairstyles... throughout different decades."
+                speaker: "گێڕەرەوە",
+                text: "لەناکاو، پارچەی بیرەوەری سەر هەڵدەدەنەوە—دانیشتن لەسەر هەمان ئەم مێزانە، ڕۆیشتن بەناو هەمان ئەم ڕاڕەوانە، بەڵام بە جلی جیاواز، ستایلی قژی جیاواز... لە ماوەی چەندین دەیە."
             },
             {
-                speaker: "You",
-                text: "I've been trapped in some kind of loop. Coming back here again and again, forgetting each time."
+                speaker: "تۆ",
+                text: "من گیرم خواردووە لە جۆرێک خولگە (لووپ). گەڕانەوە بۆ ئێرە بەردەوام، و هەموو جارێک بیرم دەچێتەوە."
             },
             {
-                speaker: "Narrator",
-                text: "You carefully take one of the books from the shelf. It feels warm to the touch, almost alive."
+                speaker: "گێڕەرەوە",
+                text: "بە وریاییەوە یەکێک لە کتێبەکان لە ڕەفەکە دەردەهێنیت. هەست بە گەرمی دەکات لە دەستت، وەک ئەوەی زیندوو بێت."
             }
         ],
         choices: [
             {
-                text: "Ring the bell to confront the librarian about your past visits",
+                text: "زەنگەکە لێ بدە بۆ بەرەنگاربوونەوەی کتێبدار سەبارەت بە سەردانەکانی پێشووت",
                 nextScene: "meet_librarian_confrontation",
                 storyFlag: "remembered_past_visits"
             },
             {
-                text: "Search for 'The Architecture of Time' book",
+                text: "بگەڕێ بەدوای کتێبی 'تەلارسازی کات'",
                 nextScene: "main_hall",
                 storyFlag: "seeking_architecture_book"
             },
             {
-                text: "Look for notes you might have left yourself in previous visits",
+                text: "بەدوای تێبینی بگەڕێ کە لەوانەیە لە سەردانەکانی پێشووت بۆ خۆتت بەجێهێشتبێت",
                 nextScene: "find_notes",
                 storyFlag: "seeking_past_self"
             }
         ]
     },
-
-    // New scene: Finding your notes
+    
+    // دیمەنی نوێ: دۆزینەوەی تێبینیەکانت
     "find_notes": {
         id: "find_notes",
         background: "scene-reception-desk",
@@ -443,42 +442,42 @@ const STORY_DATA = {
         ]
     },
 
-    // Scene for following whispers
-    "follow_whispers": {
+       // Scene for following whispers
+       "follow_whispers": {
         id: "follow_whispers",
         background: "scene-restricted-section",
         dialogue: [
             {
-                speaker: "Narrator",
-                text: "The whispers grow louder as you move deeper into the restricted section, guiding you toward something hidden."
+                speaker: "گێڕەوە",
+                text: "چرپەکان بەرزتر دەبنەوە کاتێک قووڵتر دەچیتە ناو بەشی قەدەغەکراوەوە، ڕێنمایت دەکەن بەرەو شتێکی شاراوە."
             },
             {
-                speaker: "You",
-                text: "I wrote this... but I don't remember. I need to find that book."
+                speaker: "تۆ",
+                text: "من ئەمەم نووسیوە... بەڵام بیرم نایەت. پێویستە ئەو کتێبە بدۆزمەوە."
             },
             {
-                speaker: "Narrator",
-                text: "At the bottom is a hastily scrawled message: 'BEWARE THE LIBRARIAN. She is not what she seems. She is the Library.'"
+                speaker: "گێڕەوە",
+                text: "لە خوارەوە پەیامێکی بە پەلە نووسراوە: 'ئاگاداری کتێبدارەکە بە. ئەو ئەوە نییە کە پیشانی دەدات. ئەو خودی کتێبخانەکەیە.'"
             }
         ],
         choices: [
             {
-                text: "Return to the main hall",
+                text: "بگەڕێوە بۆ هۆڵی سەرەکی",
                 nextScene: "main_hall",
                 storyFlag: "found_note"
             },
             {
-                text: "Hide and observe who's coming",
+                text: "خۆت بشارەوە و چاودێری بکە کێ دێت",
                 nextScene: "observe_librarian",
                 storyFlag: "found_note"
             },
             {
-                text: "Pretend you found nothing and ring the bell",
+                text: "وا پیشان بدە هیچت نەدۆزیوەتەوە و زەنگەکە لێبدە",
                 nextScene: "meet_librarian",
                 storyFlag: "found_note"
             },
             {
-                text: "Quickly head to the restricted section to find the book",
+                text: "بە خێرایی بڕۆ بۆ بەشی قەدەغەکراو بۆ دۆزینەوەی کتێبەکە",
                 nextScene: "main_hall",
                 storyFlag: "seeking_unwritten_book"
             }
@@ -487,52 +486,54 @@ const STORY_DATA = {
 
     // Enhanced Meet the Librarian scene
     "meet_librarian": {
-        id: "meet_librarian",
-        background: "scene-reception-desk",
-        character: {
-            id: "librarian",
-            emotion: "neutral"
-        },
-        dialogue: [
-            {
-                speaker: "Narrator",
-                text: "You ring the bell. Its clear tone echoes unnaturally long through the empty library."
-            },
-            {
-                speaker: "Narrator",
-                text: "After a moment, you hear soft footsteps. A tall, slender woman appears from between the bookshelves."
-            },
-            {
-                speaker: "Narrator",
-                text: "Her appearance strikes you as timeless—she could be thirty or she could be sixty. Her eyes hold the depth of centuries."
-            },
-            {
-                speaker: "You",
-                text: "Welcome to our humble collection. It's been... quite some time since we've had a visitor."
-            },
-            {
-                speaker: "Narrator",
-                text: "Her voice is soft but carries a strange resonance. Her eyes seem to look through you rather than at you."
-            },
-            {
-                speaker: "You",
-                text: "I'm sorry to intrude. I just needed shelter from the storm. Is it alright if I stay for a while?"
-            }
-        ],
-        choices: [
-            {
-                text: "Ask about the strange door at the entrance",
-                nextScene: "ask_door"
-            },
-            {
-                text: "Inquire about the 'special collection'",
-                nextScene: "special_collection"
-            },
-            {
-                text: "Thank her and explore on your own",
-                nextScene: "main_hall"
-            }
-        ]
+    id: "meet_librarian",
+    background: "scene-reception-desk",
+    character: {
+    id: "librarian",
+    emotion: "neutral"
+    },
+    dialogue: [
+    {
+    speaker: "گێڕەرەوە", // Narrator
+    text: "زەنگەکە لێدەدەیت. دەنگی ڕوونی بە شێوەیەکی نائاسایی درێژ لە کتێبخانە چۆڵەکەدا دەنگدەداتەوە.",
+    portrait: false // Explicitly hide portrait for narrator
+    },
+    {
+    speaker: "کتێبدار", // Librarian
+    text: "بەخێربێیت بۆ کۆکراوە سادەکەمان. ماوەیەکی... زۆرە میوانمان نەبووە.",
+    portrait: "librarian-neutral" // Explicitly specify portrait
+    },
+    {
+    speaker: "گێڕەرەوە",
+    text: "ڕووخساری وەک شتێکی بێ کات وایە—لەوانەیە سی ساڵ بێت یان شەست ساڵ. چاوەکانی قووڵایی چەندین سەدەیان تێدایە."
+    },
+    {
+    speaker: "تۆ",
+    text: "بەخێربێیت بۆ کۆکراوە سادەکەمان. ماوەیەکی... زۆرە میوانمان نەبووە."
+    },
+    {
+    speaker: "گێڕەرەوە",
+    text: "دەنگی نەرمە بەڵام دەنگدانەوەیەکی سەیری هەیە. چاوەکانی وا دیارە لە ناوتەوە دەڕوانن نەک تەنها تەماشات بکەن."
+    },
+    {
+    speaker: "تۆ",
+    text: "داوای لێبوردن دەکەم بۆ تێپەڕبوون. تەنها پێویستم بە داڵدەیەک بوو لە باهۆزەکە. ئایا ڕێگام پێدەدەیت بۆ ماوەیەک بمێنمەوە؟"
+    }
+    ],
+    choices: [
+    {
+    text: "پرسیار بکە دەربارەی دەرگا سەیرەکەی بەردەرگا",
+    nextScene: "ask_door"
+    },
+    {
+    text: "پرسیار بکە دەربارەی 'کۆکراوەی تایبەت'",
+    nextScene: "special_collection"
+    },
+    {
+    text: "سوپاسی بکە و بە تەنها بگەڕێ",
+    nextScene: "main_hall"
+    }
+    ]
     },
 
     // Scene for asking about the door
@@ -545,33 +546,33 @@ const STORY_DATA = {
         },
         dialogue: [
             {
-                speaker: "You",
-                text: "I noticed something strange about the entrance door. It seems... different from when I came in."
+                speaker: "تۆ",
+                text: "تێبینی شتێکی سەیرم کرد لەسەر دەرگای دەرچوون. وادیارە... جیاوازە لەوەی کاتێک هاتمە ژوورەوە."
             },
             {
-                speaker: "Librarian",
-                text: "The library tends to... adapt to its visitors. Sometimes doors appear where there were none before, and sometimes they vanish entirely."
+                speaker: "کتێبدار",
+                text: "کتێبخانەکە مەیلی... گونجاندنی خۆی هەیە لەگەڵ میوانەکان. جار جار دەرگا دەردەکەون لەوێ کە پێشتر نەبوون، و هەندێک جاریش بە تەواوی بزر دەبن."
             },
             {
-                speaker: "You",
-                text: "That's impossible. Buildings don't change on their own."
+                speaker: "تۆ",
+                text: "ئەمە مەحاڵە. بینا خۆیان بە خۆیان ناگۆڕدرێن."
             },
             {
-                speaker: "Librarian",
-                text: "This is no ordinary library. The architecture responds to knowledge and intent. The more you seek, the more passages will reveal themselves to you."
+                speaker: "کتێبدار",
+                text: "ئەمە کتێبخانەیەکی ئاسایی نییە. بیناکە بەرهەڵستی زانیاری و مەبەست دەکات. هەتا زیاتر بگەڕێیت، دەروازەی زیاتر خۆیان بۆ تۆ دەردەخەن."
             },
             {
-                speaker: "Narrator",
-                text: "Her eyes seem to glint with an unnatural light as she speaks, and you can't shake the feeling that she's not telling you everything."
+                speaker: "گێڕەرەوە",
+                text: "چاوەکانی بە ڕووناکییەکی نائاسایی دەدرەوشێنەوە کاتێک قسە دەکات، و ناتوانیت ئەو هەستە لە خۆت دوور بخەیتەوە کە هەموو شتێکت پێ ناڵێت."
             }
         ],
         choices: [
             {
-                text: "Ask about the special collection",
+                text: "پرسیار بکە دەربارەی کۆکراوەی تایبەت",
                 nextScene: "special_collection"
             },
             {
-                text: "Thank her and explore on your own",
+                text: "سوپاسی بکە و بە تەنها بگەڕێ",
                 nextScene: "main_hall"
             }
         ]
@@ -579,69 +580,69 @@ const STORY_DATA = {
 
     // New scene for confronting librarian
     "meet_librarian_confrontation": {
-        id: "meet_librarian_confrontation",
-        background: "scene-reception-desk",
-        character: {
-            id: "librarian",
-            emotion: "concerned"
-        },
-        dialogue: [
-            {
-                speaker: "Narrator",
-                text: "You ring the bell firmly. Its tone cuts through the silence like a knife."
-            },
-            {
-                speaker: "Narrator",
-                text: "The librarian appears almost instantly, as if she was waiting just out of sight."
-            },
-            {
-                speaker: "Librarian",
-                text: "Ah, there you are. Back again so soon? You usually take longer to... remember."
-            },
-            {
-                speaker: "You",
-                text: "What have you done to me? According to that ledger, I've been coming here for decades—even before I was born."
-            },
-            {
-                speaker: "Librarian",
-                text: "Time works differently here. The library exists in all moments at once. And you, dear reader, have been quite persistent across many lifetimes."
-            },
-            {
-                speaker: "You",
-                text: "Why can't I remember my previous visits? What happens to people who don't return?"
-            },
-            {
-                speaker: "Librarian",
-                text: "Some knowledge comes at a cost. The mind protects itself by forgetting what it cannot comprehend. As for those who don't return..."
-            },
-            {
-                speaker: "Narrator",
-                text: "She glances toward the bookshelves, a strange sadness in her eyes."
-            },
-            {
-                speaker: "You",
-                text: "You mentioned a 'special collection'. What kind of books are kept there?"
-            },
-            {
-                speaker: "Librarian",
-                text: "They become part of the collection. Every book has an author, after all."
-            }
-        ],
-        choices: [
-            {
-                text: "\"How do I break this cycle and escape for good?\"",
-                nextScene: "ask_escape"
-            },
-            {
-                text: "\"What are you? Are you even human?\"",
-                nextScene: "ask_librarian_nature"
-            },
-            {
-                text: "Leave immediately to search for The Unwritten End",
-                nextScene: "main_hall",
-                condition: "seeking_unwritten_book"
-            }
-        ]
+    id: "meet_librarian_confrontation",
+    background: "scene-reception-desk",
+    character: {
+    id: "librarian",
+    emotion: "concerned"
+    },
+    dialogue: [
+    {
+    speaker: "گێڕەرەوە",
+    text: "بە توندی زەنگەکە لێدەدەیت. دەنگەکەی وەک چەقۆیەک بێدەنگییەکە دەبڕێت."
+    },
+    {
+    speaker: "گێڕەرەوە",
+    text: "کتێبدارەکە هەر دەستبەجێ دەردەکەوێت، وەک ئەوەی چاوەڕێی دەکرد لە شوێنێک کە نەبینرێت."
+    },
+    {
+    speaker: "کتێبدار",
+    text: "ئاه، ئەوەتای. هێندە زوو گەڕایتەوە؟ بە گشتی کاتی زیاترت دەوێت بۆ... بیرهێنانەوە."
+    },
+    {
+    speaker: "تۆ",
+    text: "چیت بەسەر من هێناوە؟ بە پێی ئەو تۆمارە، من بۆ چەندین دەیە سەردانی ئێرەم کردووە—تەنانەت پێش ئەوەی لەدایک ببم."
+    },
+    {
+    speaker: "کتێبدار",
+    text: "کات لێرە بە شێوەیەکی جیاواز کار دەکات. کتێبخانەکە لە هەموو چرکەساتەکاندا هەیە. تۆش، خوێنەری بەڕێز، لە چەندین ژیاندا زۆر بەردەوام بوویت."
+    },
+    {
+    speaker: "تۆ",
+    text: "بۆچی ناتوانم سەردانە پێشووەکانم بیر بێنمەوە؟ چی بەسەر ئەو کەسانە دێت کە ناگەڕێنەوە؟"
+    },
+    {
+    speaker: "کتێبدار",
+    text: "هەندێک زانیاری بەهایەکی هەیە. مێشک خۆی دەپارێزێت بە بیرچوونەوەی ئەوەی ناتوانێت تێیبگات. سەبارەت بەوانەی ناگەڕێنەوە..."
+    },
+    {
+    speaker: "گێڕەرەوە",
+    text: "ئەو سەیری ڕەفە کتێبەکان دەکات، خەمێکی سەیر لە چاوەکانیدایە."
+    },
+    {
+    speaker: "تۆ",
+    text: "باست لە 'کۆکراوەی تایبەت' کرد. چ جۆرە کتێبێک لەوێ هەڵگیراوە؟"
+    },
+    {
+    speaker: "کتێبدار",
+    text: "ئەوان دەبنە بەشێک لە کۆکراوەکە. لە کۆتاییدا، هەر کتێبێک نووسەرێکی هەیە."
+    }
+    ],
+    choices: [
+    {
+    text: "\"چۆن ئەم بازنەیە بشکێنم و بۆ هەمیشە دەرباز ببم؟\"",
+    nextScene: "ask_escape"
+    },
+    {
+    text: "\"تۆ چیت؟ بە ڕاستی مرۆڤیت؟\"",
+    nextScene: "ask_librarian_nature"
+    },
+    {
+    text: "دەستبەجێ بڕۆ بۆ گەڕان بەدوای کتێبی کۆتایی نەنووسراو",
+    nextScene: "main_hall",
+    condition: "seeking_unwritten_book"
+    }
+    ]
     },
 
     // Main hall scene - enhanced
@@ -650,51 +651,51 @@ const STORY_DATA = {
         background: "scene-main-hall",
         dialogue: [
             {
-                speaker: "Narrator",
-                text: "The main hall stretches before you, lined with towering bookshelves that seem to reach impossibly high."
+                speaker: "گێڕەرەوە",
+                text: "هۆڵی سەرەکی لەبەردەمتدا درێژ دەبێتەوە، پڕە لە ڕەفە کتێبی بەرز کە وادیارە دەگەنە بەرزاییەکی نامومکین."
             },
             {
-                speaker: "Narrator",
-                text: "Dust motes dance in beams of light that filter through stained glass windows, depicting scenes of readers throughout history."
+                speaker: "گێڕەرەوە",
+                text: "تۆزی هەڵواسراو لە تیشکی ڕووناکیدا دەسوڕێنەوە کە لە پەنجەرە ڕەنگاوڕەنگەکانەوە دێتە ژوورەوە، وێنەی خوێنەران لە مێژوودا پیشان دەدەن."
             },
             {
-                speaker: "You",
-                text: "I've never seen a library like this before... it's enormous."
+                speaker: "تۆ",
+                text: "هەرگیز کتێبخانەیەکی وام نەبینیوە... زۆر گەورەیە."
             },
             {
-                speaker: "Narrator",
-                text: "As you walk further in, you notice the layout seems... wrong. Corridors twist in ways that defy the building's exterior dimensions."
+                speaker: "گێڕەرەوە",
+                text: "کاتێک زیاتر دەڕۆیتە پێشەوە، تێبینی دەکەیت کە نەخشەکە... هەڵەیە. ڕێڕەوەکان بە شێوەیەک دەسوڕێنەوە کە پێچەوانەی دووری دەرەوەی بیناکەیە."
             },
             {
-                speaker: "Narrator",
-                text: "And in the distance, you hear what sounds like... whispers. Not just any whispers—they seem to know your name."
+                speaker: "گێڕەرەوە",
+                text: "لە دوورەوە، دەنگێک دەبیستیت کە وەک... چرپە وایە. نەک هەر چرپەیەک—وادیارە ناوی تۆ دەزانن."
             },
             {
-                speaker: "Narrator",
-                text: "You spot an unusual section of the library ahead with a faded sign reading 'Restricted Section,' and a large wooden directory map on the wall."
+                speaker: "گێڕەرەوە",
+                text: "بەشێکی ناوازەی کتێبخانەکە لە پێشەوە دەبینیت کە نیشانەیەکی کاڵی لەسەرە 'بەشی قەدەغەکراو'، و نەخشەیەکی گەورەی دارین لەسەر دیوارەکە."
             }
         ],
         choices: [
             {
-                text: "Follow the sound of whispers",
+                text: "شوێن دەنگی چرپەکان بکەوە",
                 nextScene: "restricted_section"
             },
             {
-                text: "Examine the directory map",
+                text: "نەخشەی ڕێنیشاندەرەکە تاوتوێ بکە",
                 nextScene: "examine_map"
             },
             {
-                text: "Look for 'The Architecture of Time' book",
+                text: "بگەڕێ بۆ کتێبی 'بیناسازی کات'",
                 nextScene: "seek_architecture_book",
                 condition: "seeking_architecture_book"
             },
             {
-                text: "Head directly to the restricted section",
+                text: "ڕاستەوخۆ بڕۆ بۆ بەشی قەدەغەکراو",
                 nextScene: "restricted_section",
                 condition: "seeking_unwritten_book"
             },
             {
-                text: "Return to the entrance",
+                text: "بگەڕێوە بۆ دەروازەی چوونەژوورەوە",
                 nextScene: "try_leave"
             }
         ]
@@ -709,50 +710,88 @@ const STORY_DATA = {
         },
         dialogue: [
             {
-                speaker: "Narrator",
-                text: "You approach the ornate wooden directory map mounted on the wall. It shows the library's layout, but something is very wrong with its design."
+                speaker: "گێڕەرەوە",
+                text: "نزیک دەبیتەوە لە نەخشەی ڕێنیشاندەرە ڕازاوە دارینەکە کە لەسەر دیوارەکە هەڵواسراوە. نەخشەی کتێبخانەکە پیشان دەدات، بەڵام شتێکی زۆر هەڵەیە لە دیزاینەکەیدا."
             },
             {
-                speaker: "Narrator",
-                text: "Sections overlap in impossible ways. Rooms appear to exist in multiple places at once. And strangest of all, the map seems to shift slightly when you're not looking directly at it."
+                speaker: "گێڕەرەوە",
+                text: "بەشەکان بە شێوەیەکی نامومکین تێکەڵ دەبن. ژوورەکان وادیارە لە چەندین شوێندا هاوکات بوونیان هەیە. سەیرترین شت، نەخشەکە بە کەمێک دەجووڵێت کاتێک ڕاستەوخۆ سەیری ناکەیت."
             },
             {
-                speaker: "You",
-                text: "This can't be architecturally possible... unless the building itself is changing."
+                speaker: "تۆ",
+                text: "ئەمە لە ڕووی بیناسازییەوە مومکین نییە... مەگەر خودی بیناکە بگۆڕدرێت."
             },
             {
-                speaker: "Narrator",
-                text: "You notice one section labeled 'The Archive of Visitors' and another called 'The Nexus of Endings' deep within the restricted section."
+                speaker: "گێڕەرەوە",
+                text: "تێبینی بەشێک دەکەیت بە ناوی 'ئەرشیفی سەردانکەران' و یەکێکی تر بە ناوی 'چەقی کۆتاییەکان' کە قووڵ لە ناو بەشی قەدەغەکراودایە."
             },
             {
-                speaker: "Narrator",
-                text: "As you lean closer to examine the details, you notice tiny handwritten notes in the margins of the map—similar to your own handwriting."
+                speaker: "گێڕەرەوە",
+                text: "کاتێک نزیکتر دەبیتەوە بۆ تاوتوێکردنی وردەکارییەکان، تێبینی یادداشتی بچووکی دەستنووس دەکەیت لە کەنارەکانی نەخشەکەدا—هاوشێوەی خەتی خۆت."
             },
             {
-                speaker: "Narrator",
-                text: "One note points to the restricted section: 'The Unwritten End is here. The true exit.'"
+                speaker: "گێڕەرەوە",
+                text: "یەکێک لە یادداشتەکان ئاماژە بە بەشی قەدەغەکراو دەکات: 'کۆتایی نەنووسراو لێرەیە. دەرچوونی ڕاستەقینە.'"
             }
         ],
         choices: [
             {
-                text: "Head to the Archive of Visitors to learn more about past visitors",
+                text: "بچۆ بۆ ئەرشیفی سەردانکەران بۆ زانینی زیاتر دەربارەی سەردانکەرانی پێشوو",
                 nextScene: "archive_of_visitors",
                 storyFlag: "knows_about_archive"
             },
             {
-                text: "Go directly to the restricted section to find The Unwritten End",
+                text: "ڕاستەوخۆ بچۆ بۆ بەشی قەدەغەکراو بۆ دۆزینەوەی کۆتایی نەنووسراو",
                 nextScene: "restricted_section",
                 storyFlag: "seeking_unwritten_book"
             },
             {
-                text: "Return to exploring the main hall",
+                text: "بگەڕێوە بۆ گەڕان لە هۆڵی سەرەکی",
                 nextScene: "main_hall",
                 storyFlag: "saw_map"
             }
         ]
     },
 
-    // Add multiple endings based on player choices throughout the game
+    // Add a dramatic final choice scene before the endings
+    "final_choice": {
+        id: "final_choice",
+        background: "scene-restricted-section",
+        effects: {
+            visual: "pulse"
+        },
+        dialogue: [
+            {
+                speaker: "گێڕەرەوە",
+                text: "کتێبی 'کۆتایی نەنووسراو' لە دەستتدایە. چرپەکان و دەنگەکان لە دەوروبەرتدا دەبڕنەوە، و کتێبدارەکە بە نزیکیت دەست دەکات."
+            },
+            {
+                speaker: "کتێبدار",
+                text: "هەموو شتێک لە ئەم کاتەدا وەستان. هەڵبژاردنەکەت ئەرکەکەی تۆیە. ئایا دەتەوێت ڕزگار بیت، بەهای هەموو ئەوەی لە ئێرە فێربویت؟ یان دەتەوێت بەشێک لە کتێبخانەکە بیت، هەمیشە لەگەڵ نهێنییەکانی؟ یان... ئازادی بۆ هەموو کەسانی گیرخواردوو بدەیت؟"
+            },
+            {
+                speaker: "تۆ",
+                text: "هەست دەکەم ئەم هەڵبژاردنە زیاتر لە تەنها خۆمە. هەموو ئەو کەسانەی پێشتر لێرە بوون، هەموو ئەو نهێنییەکان... ئایا دەتوانم ئازادییان بدەم؟"
+            }
+        ],
+        choices: [
+            {
+                text: "کتێبەکە بخوێنەوە و خۆت ڕزگار بکە",
+                nextScene: "ending_escape"
+            },
+            {
+                text: "بەشێک لە کتێبخانەکە ببە، هەمیشەیی ببە",
+                nextScene: "ending_transformation"
+            },
+            {
+                text: "کۆتایی نەنووسراو بەکاربێنە بۆ ئازادکردنی هەموو گیانەکان",
+                nextScene: "ending_liberation"
+            }
+        ]
+    },
+
+    // Dramatic and meaningful endings
+
     "ending_escape": {
         id: "ending_escape",
         background: "scene-library-exit",
@@ -761,41 +800,41 @@ const STORY_DATA = {
         },
         dialogue: [
             {
-                speaker: "Narrator",
-                text: "As you read the final page of The Unwritten End, the words begin to glow with golden light."
+                speaker: "گێڕەرەوە",
+                text: "کاتێک لاپەڕەی کۆتایی کتێبی کۆتایی نەنووسراو دەخوێنیتەوە، وشەکان دەست دەکەن بە درەوشانەوە بە ڕووناکی زێڕین. هەست دەکەیت وەک ئەوەی هەموو ئازاری خۆت، هەموو بیرۆکە و ترسەکانت، لە کتێبخانەکەدا جێهێشت."
             },
             {
-                speaker: "Narrator",
-                text: "The library around you trembles, as if protesting your imminent departure."
+                speaker: "گێڕەرەوە",
+                text: "کتێبخانەکە لە دەوروبەرت دەلەرزێت، وەک ئەوەی ناڕەزایی لە دەرچوونی نزیکی تۆ دەربڕێت. دەنگی گیانەکانی پێشوو دەبیستیت، بەرامبەر ئازادی تۆ، لە ناو تاریکییەکەدا دەبڕنەوە."
             },
             {
-                speaker: "Librarian",
-                text: "So, you've found it at last. The true exit. After all these cycles..."
+                speaker: "کتێبدار",
+                text: "کەواتە، لە کۆتاییدا دۆزیتەوە. دەرچوونی ڕاستەقینە. بەڵام بیرت بمێنێت: هەر ئازادییەک بەهایەکی هەیە."
             },
             {
-                speaker: "You",
-                text: "This ends now. I'm breaking the loop."
+                speaker: "تۆ",
+                text: "ئەمە ئێستا کۆتایی دێت. من بازنەکە دەشکێنم، بەڵام بەشێک لە دڵم هەمیشە لێرە دەبێتەوە."
             },
             {
-                speaker: "Narrator",
-                text: "Light pours from the book, enveloping you. For a moment, you see the countless versions of yourself who have walked these halls before—and they all smile in relief."
+                speaker: "گێڕەرەوە",
+                text: "ڕووناکی لە کتێبەکەوە دێتە دەرەوە، دەورت دەدات. بۆ ساتێک، بینینی بێژمار وێنەی خۆت دەکەیت کە پێشتر لەم هۆڵانەدا ڕێیان کردووە—و هەموویان بە دڵنیاییەوە پێدەکەنن."
             },
             {
-                speaker: "Narrator",
-                text: "The light fades, and you find yourself standing outside in the rain. The storm has passed, and the building behind you is just an ordinary, abandoned library."
+                speaker: "گێڕەرەوە",
+                text: "ڕووناکییەکە کاڵ دەبێتەوە، و خۆت دەبینیتەوە لە دەرەوە لە ژێر باران. باهۆزەکە تێپەڕیوە، و بیناکە لە پشتتەوە تەنها کتێبخانەیەکی ئاسایی چۆڵکراوە."
             },
             {
-                speaker: "Narrator",
-                text: "You have broken free from the cycle, but a part of you will always remember the endless shelves and the secrets they contained."
+                speaker: "گێڕەرەوە",
+                text: "تۆ لە بازنەکە ڕزگارت بووە، بەڵام بیرۆکە و هەستەکانت هەمیشە لەگەڵت دەبن. ئازادی بەهای هەموو ئەوەی فێربویت هەبوو."
             },
             {
-                speaker: "Narrator",
-                text: "THE END - You escaped the library's grasp"
+                speaker: "گێڕەرەوە",
+                text: "کۆتایی - تۆ لە چنگی کتێبخانەکە ڕزگارت بوو، بەڵام بەهایەکەی هەستت کرد."
             }
         ],
         choices: [
             {
-                text: "Play Again",
+                text: "دووبارە یاری بکەوە",
                 nextScene: "entrance"
             }
         ]
@@ -809,41 +848,41 @@ const STORY_DATA = {
         },
         dialogue: [
             {
-                speaker: "Narrator",
-                text: "You make your choice—knowledge over freedom. Some secrets are worth any price."
+                speaker: "گێڕەرەوە",
+                text: "هەڵبژاردنی خۆت دەکەیت—زانیاری لە پێش ئازادی. هەندێک نهێنی شایەنی هەر نرخێکن."
             },
             {
-                speaker: "Librarian",
-                text: "Few choose this path willingly. But the library always recognizes true seekers of knowledge."
+                speaker: "کتێبدار",
+                text: "کەم کەس ئەم ڕێگایە بە خواستی خۆیان هەڵدەبژێرن. بەڵام کتێبخانەکە هەمیشە پشکنەرانی ڕاستەقینەی زانیاری دەناسێتەوە."
             },
             {
-                speaker: "You",
-                text: "I want to understand everything. No matter the cost."
+                speaker: "تۆ",
+                text: "دەمەوێت هەموو شتێک تێبگەم. هەر چەندێک تێچووی هەبێت. ئازادییەکەی تر بۆ من ئەوەیە کە بەشێک لە شتێکی گەورەتر ببمە."
             },
             {
-                speaker: "Narrator",
-                text: "You feel your body growing lighter, your consciousness expanding. The boundaries between you and the library begin to blur."
+                speaker: "گێڕەرەوە",
+                text: "هەست دەکەیت جەستەت سووکتر دەبێت، هۆشیاریت فراوانتر دەbێت. سنوورەکانی نێوان تۆ و کتێبخانەکە دەست دەکەن بە لێڵبوون."
             },
             {
-                speaker: "Narrator",
-                text: "Your memories stretch backward through centuries—you have always been here, and always will be."
+                speaker: "گێڕەرەوە",
+                text: "بیرەوەرییەکانت بۆ چەندین سەدە درێژ دەبنەوە—تۆ هەمیشە لێرە بوویت، و هەمیشەش دەمێنیت. هەموو گیانەکانی پێشوو لەگەڵت دەبن."
             },
             {
-                speaker: "Narrator",
-                text: "As your physical form fades, you realize you're not disappearing—you're becoming something greater. Your consciousness merges with the library itself."
+                speaker: "گێڕەرەوە",
+                text: "کاتێک شێوەی جەستەییت کاڵ دەبێتەوە، تێدەگەیت کە بزر نابیت—دەبیت بە شتێکی گەورەتر. هۆشیاریت لەگەڵ خودی کتێبخانەکە تێکەڵ دەبێت."
             },
             {
-                speaker: "Narrator",
-                text: "Now you'll welcome new visitors, guide new seekers through the endless shelves. A new custodian of forbidden knowledge."
+                speaker: "گێڕەرەوە",
+                text: "ئێستا تۆ بەخێرهاتنی میوانانی نوێ دەکەیت، پشکنەرانی نوێ ڕێنمایی دەکەیت لە ناو ڕەفە بێکۆتاکان. پارێزەرێکی نوێی زانیاریە قەدەغەکراوەکان."
             },
             {
-                speaker: "Narrator",
-                text: "THE END - You became one with the library"
+                speaker: "گێڕەرەوە",
+                text: "کۆتایی - تۆ بوویت بە یەک لەگەڵ کتێبخانەکە، هەمیشەیی و بێکۆتا."
             }
         ],
         choices: [
             {
-                text: "Play Again",
+                text: "دووبارە یاری بکەوە",
                 nextScene: "entrance"
             }
         ]
@@ -857,45 +896,45 @@ const STORY_DATA = {
         },
         dialogue: [
             {
-                speaker: "Narrator",
-                text: "With the final piece of the puzzle in place, you understand the nature of the library at last—and how to free it."
+                speaker: "گێڕەرەوە",
+                text: "بە دانانی دوایین پارچەی پازڵەکە، سروشتی کتێبخانەکە لە کۆتاییدا تێدەگەیت - و چۆن ئازادی بکەیت."
             },
             {
-                speaker: "You",
-                text: "It was never meant to trap people. It was meant to preserve knowledge, but something corrupted its purpose."
+                speaker: "تۆ",
+                text: "هەرگیز مەبەست نەبوو خەڵک بە دیل بگرێت. مەبەست پاراستنی زانیاری بوو، بەڵام شتێک ئامانجەکەی تێکدا. ئێستا دەمەوێت هەموو گیانەکان ڕزگار بکەم."
             },
             {
-                speaker: "Librarian",
-                text: "For centuries, I've waited for someone who would understand. Who would see the prison for what it is."
+                speaker: "کتێبدار",
+                text: "بۆ سەدان ساڵ، چاوەڕێی کەسێکم کردووە کە تێبگات. کەسێک کە زیندانەکە ببینێت وەک ئەوەی کە هەیە."
             },
             {
-                speaker: "Narrator",
-                text: "The librarian's form flickers, revealing her true nature—a guardian spirit bound to the library against her will."
+                speaker: "گێڕەرەوە",
+                text: "شێوەی کتێبدارەکە دەلەرزێت، سروشتی ڕاستەقینەی ئەو دەردەکەوێت - گیانێکی پارێزەرە کە بە ناچاری بە کتێبخانەکەوە بەستراوەتەوە."
             },
             {
-                speaker: "Librarian",
-                text: "Break the cycle. Free us all."
+                speaker: "کتێبدار",
+                text: "بازنەکە بشکێنە. هەموومان ئازاد بکە."
             },
             {
-                speaker: "Narrator",
-                text: "You place The Architect's Key in the ancient lock hidden behind the reception desk. With a turn, reality itself seems to sigh with relief."
+                speaker: "گێڕەرەوە",
+                text: "کلیلی میعمارەکە دەخەیتە قوفڵە کۆنەکەی پشت مێزی پێشوازی. بە سووڕاندنێک، ڕاستی خۆی وەک هەناسەیەکی ئاسوودەیی دەردەکەوێت."
             },
             {
-                speaker: "Narrator",
-                text: "The library's walls become transparent, revealing thousands of trapped souls—former visitors now freed from their literary prison."
+                speaker: "گێڕەرەوە",
+                text: "دیوارەکانی کتێبخانەکە شەفاف دەبن، هەزاران گیانی گیرخواردوو دەردەکەون - سەردانکەرانی پێشوو کە ئێستا لە زیندانی ئەدەبییەکەیان ئازاد کراون."
             },
             {
-                speaker: "Narrator",
-                text: "As the building crumbles around you, the librarian takes your hand and leads you to safety."
+                speaker: "گێڕەرەوە",
+                text: "کاتێک بیناکە لە دەوروبەرت دەڕووخێت، کتێبدارەکە دەستت دەگرێت و بەرەو سەلامەتی ڕێنماییت دەکات."
             },
             {
-                speaker: "Narrator",
-                text: "THE END - You liberated the library and its prisoners"
+                speaker: "گێڕەرەوە",
+                text: "کۆتایی - تۆ کتێبخانەکە و هەموو گیانەکان ئازاد کرد."
             }
         ],
         choices: [
             {
-                text: "Play Again",
+                text: "دووبارە یاری بکەوە",
                 nextScene: "entrance"
             }
         ]

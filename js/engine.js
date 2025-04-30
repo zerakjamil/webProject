@@ -1,5 +1,3 @@
-// Main game engine for Echoes of the Library
-
 class GameEngine {
     constructor() {
         this.currentScene = null;
@@ -135,18 +133,59 @@ class GameEngine {
         
         this.currentDialogueText = dialogText;
         
-        // Check if this is the librarian speaking and show portrait
-        if (dialogueEntry.speaker === "Librarian") {
-            this.speakerPortraitElement.innerHTML = '<img src="./assets/images/characters/librarian-neutral-1.png" alt="Librarian">';
-            this.speakerPortraitElement.style.display = 'block';
+        // Portrait mapping system
+        const portraitMap = {
+            // Kurdish to English mapping 
+            "کتێبدار": "librarian",
+            "گێڕەرەوە": "narrator", 
+            "تۆ": "player",
+            "Librarian": "librarian",
+            "Narrator": "narrator",
+            "You": "player"
+        };
+        
+        // Get character type from the mapping
+        const characterType = portraitMap[dialogueEntry.speaker];
+        
+        // Set appropriate portrait based on character type
+        if (characterType) {
+            // Get emotion if specified in the scene's character data
+            let emotion = "neutral";
+            if (this.currentScene.character && this.currentScene.character.emotion) {
+                emotion = this.currentScene.character.emotion;
+            }
             
-            // Ensure dialog box has enough height for the portrait
-            this.dialogElement.style.minHeight = '80px';
+            // Set portrait based on character type
+            switch(characterType) {
+                case "librarian":
+                    this.speakerPortraitElement.innerHTML = `<img src="./assets/images/characters/librarian/librarian-${emotion}.png" alt="Librarian">`;
+                    this.speakerPortraitElement.style.display = 'block';
+                    break;
+                case "curator":
+                    this.speakerPortraitElement.innerHTML = `<img src="./assets/images/characters/curator/Curator.png" alt="Curator">`;
+                    this.speakerPortraitElement.style.display = 'block';
+                    break;
+                case "ghost":
+                    this.speakerPortraitElement.innerHTML = `<img src="./assets/images/characters/ghost/ghost-girl.png" alt="Ghost">`;
+                    this.speakerPortraitElement.style.display = 'block';
+                    break;
+                default:
+                    // Hide portrait for other speakers like narrator or player
+                    this.speakerPortraitElement.style.display = 'none';
+                    this.speakerPortraitElement.innerHTML = '';
+                    break;
+            }
+            
+            // Ensure dialog box has enough height when showing a portrait
+            if (this.speakerPortraitElement.style.display === 'block') {
+                this.dialogElement.style.minHeight = '80px';
+            } else {
+                this.dialogElement.style.minHeight = '';
+            }
         } else {
+            // No matching portrait, hide the portrait element
             this.speakerPortraitElement.style.display = 'none';
             this.speakerPortraitElement.innerHTML = '';
-            
-            // Reset dialog box height
             this.dialogElement.style.minHeight = '';
         }
         
@@ -280,79 +319,61 @@ class GameEngine {
                 newBg.classList.add(backgroundId);
                 console.log(`Applied CSS background class: ${backgroundId}`);
                 
-                // Add magical particles for tome scene
-                if (backgroundId === 'scene-ancient-tome') {
-                    const particles = document.createElement('div');
-                    particles.className = 'magical-particles';
-                    newBg.appendChild(particles);
-                    console.log('Added magical particles to tome scene');
-                }
-                
-                // Add special elements for detailed library scene
-                if (backgroundId === 'scene-library-detailed') {
-                    // Add mist layer
-                    const mistLayer = document.createElement('div');
-                    mistLayer.className = 'mist';
-                    newBg.appendChild(mistLayer);
+                // Special handling for reception desk
+                if (backgroundId === 'scene-reception-desk') {
+                    // Add candle light effect
+                    const candleLight = document.createElement('div');
+                    candleLight.className = 'candle-light';
+                    newBg.appendChild(candleLight);
                     
-                    // Add rain layer
-                    const rainLayer = document.createElement('div');
-                    rainLayer.className = 'rain';
-                    newBg.appendChild(rainLayer);
-                    
-                    console.log('Added atmospheric elements to detailed library scene');
+                    // Add subtle desk movement on hover
+                    newBg.addEventListener('mousemove', function(e) {
+                        const moveX = (e.clientX - window.innerWidth/2) / 50;
+                        const moveY = (e.clientY - window.innerHeight/2) / 50;
+                        this.style.backgroundPosition = `calc(50% + ${moveX}px) calc(50% + ${moveY}px)`;
+                    });
                 }
             } else if (backgroundId) {
-                // Use image-based background
-                const imageUrl = `assets/images/backgrounds/${backgroundId}.jpg`;
+                // Map scene IDs to actual image files in the scenes folder
+                const sceneImageMap = {
+                    "reception-desk": "library-desk-scene.jpg",
+                    "main-hall": "inside-library.png",
+                    "restricted-section": "restricted-section.jpg",
+                    "library-exit": "library-exit.jpg",
+                    "becoming": "becoming.jpg",
+                    "liberation": "liberation.jpg",
+                    "ancient-tome": "ancient-tome.jpg",
+                    "map": "library-map.jpg"
+                    // Add more mappings as needed
+                };
+                
+                // Get actual image file name from the map, or use the ID directly
+                const imageFile = sceneImageMap[backgroundId] || `${backgroundId}.jpg`;
+                const imageUrl = `assets/images/scenes/${imageFile}`;
+                
                 console.log(`Setting image background: ${imageUrl}`);
                 newBg.style.backgroundImage = `url('${imageUrl}')`;
-
-                // Preload image to check for errors
-                const img = new Image();
-                img.onload = () => {
-                    console.log(`Background image ${imageUrl} loaded successfully.`);
-                };
-                img.onerror = () => {
-                    console.warn(`Background image ${imageUrl} not found or failed to load, using fallback color.`);
-                    newBg.style.backgroundImage = '';
-                    newBg.style.backgroundColor = '#1a1a24'; // Fallback color
-                };
-                img.src = imageUrl;
-            } else {
-                 console.warn(`Background ID "${backgroundId}" is invalid or missing. Using fallback color.`);
-                 newBg.style.backgroundColor = '#1a1a24'; // Fallback for missing ID
             }
-        } catch(e) {
-            console.error("Error setting background:", e);
-            newBg.style.backgroundColor = '#1a1a24'; // Fallback color on error
-        }
-
-        // Add new background to the DOM, initially transparent
-        const container = document.querySelector('.game-container');
-        // Insert before the character layer to keep layering correct
-        container.insertBefore(newBg, this.characterElement);
-
-        // Fade in the new background
-        setTimeout(() => {
-            newBg.style.transition = 'opacity 1s ease-in-out';
+            
+            // Append the new background and fade it in
+            this.backgroundElement.appendChild(newBg);
+            
+            // Force a reflow to ensure the transition works
+            void newBg.offsetWidth;
+            
+            // Fade in the new background
             newBg.style.opacity = '1';
-            console.log('New background faded in.');
-
-            // Remove the *previous* background element after the new one is visible
-            if (this.backgroundElement && this.backgroundElement !== newBg) {
-                 console.log('Removing old background element.');
-                 this.backgroundElement.style.opacity = '0'; // Optional: fade out old one
-                 setTimeout(() => {
-                    if (this.backgroundElement.parentNode) {
-                        this.backgroundElement.parentNode.removeChild(this.backgroundElement);
-                    }
-                    this.backgroundElement = newBg; // Update reference *after* removal
-                 }, 1000); // Match transition duration
-            } else {
-                 this.backgroundElement = newBg; // Set reference if it's the first background
-            }
-        }, 50); // Short delay to ensure transition applies
+            
+            // Remove old backgrounds after transition
+            setTimeout(() => {
+                // Remove all children except the last one (our new background)
+                while (this.backgroundElement.children.length > 1) {
+                    this.backgroundElement.removeChild(this.backgroundElement.firstChild);
+                }
+            }, 1000); // Match this to your transition duration
+        } catch(e) {
+            console.error('Error changing background:', e);
+        }
     }
     
     showCharacter(characterData) {
@@ -476,6 +497,77 @@ class GameEngine {
             // Optionally inform the user that the save file is corrupt
         }
     }
+
+    // Add these methods inside the GameEngine class
+
+    saveGameToServer() {
+        if (!this.currentScene || !this.currentScene.id) {
+            alert("Cannot save: No scene loaded.");
+            return;
+        }
+        const saveData = {
+            currentScene: this.currentScene.id,
+            inventory: this.gameState.inventory,
+            choicesMade: this.gameState.choicesMade
+        };
+        fetch('save_state.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(saveData)
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.status === 'success') {
+                this.showSavedIndicator('Game Saved (Server)');
+            } else {
+                alert('Server save failed: ' + (data.message || 'Unknown error'));
+            }
+        })
+        .catch(err => {
+            alert('Server save error: ' + err);
+        });
+    }
+
+    loadGameFromServer() {
+        fetch('load_state.php')
+        .then(res => res.json())
+        .then(data => {
+            if (data.status === 'success' && data.game_state) {
+                const gs = data.game_state;
+                // Map PHP/session keys to JS keys
+                this.gameState.inventory = gs.inventory || [];
+                this.gameState.choicesMade = gs.choices_made || [];
+                this.gameState.endingsSeen = gs.endings_seen || [];
+                // Use the correct scene property
+                const sceneId = gs.current_scene || 'entrance';
+                if (!STORY_DATA[sceneId]) {
+                    alert('Saved scene not found in story data!');
+                    return;
+                }
+                // Fade out and load scene
+                Transitions.fadeOut(800).then(() => {
+                    this.loadScene(sceneId);
+                    this.showSavedIndicator('Game Loaded (Server)');
+                });
+            } else {
+                alert('No server save found.');
+            }
+        })
+        .catch(err => {
+            alert('Server load error: ' + err);
+        });
+    }
+
+    showSavedIndicator(text = 'Game Saved') {
+        const savedIndicator = document.createElement('div');
+        savedIndicator.className = 'saved-indicator';
+        savedIndicator.textContent = text;
+        document.body.appendChild(savedIndicator);
+        setTimeout(() => {
+            savedIndicator.style.opacity = '0';
+            setTimeout(() => savedIndicator.remove(), 500);
+        }, 1500);
+    }
 }
 
 // Create a stub AudioManager to prevent errors
@@ -554,6 +646,29 @@ document.addEventListener('DOMContentLoaded', () => {
                          document.body.innerHTML += `<div style="color:red; padding:20px; background:rgba(0,0,0,0.8); position:fixed; top:10px; left:10px; z-index:1000;">Fatal Error during game initialization. Check console.</div>`;
                     }
                 }, 1000); // Match splash screen fade duration
+            });
+        }
+
+        // Add server save/load buttons to menu
+        const menu = document.querySelector('.game-menu');
+        if (menu) {
+            const saveServerBtn = document.createElement('button');
+            saveServerBtn.id = 'save-server-btn';
+            saveServerBtn.className = 'menu-btn';
+            saveServerBtn.textContent = 'Save (Server)';
+            menu.appendChild(saveServerBtn);
+
+            const loadServerBtn = document.createElement('button');
+            loadServerBtn.id = 'load-server-btn';
+            loadServerBtn.className = 'menu-btn';
+            loadServerBtn.textContent = 'Load (Server)';
+            menu.appendChild(loadServerBtn);
+
+            saveServerBtn.addEventListener('click', () => {
+                if (window.gameEngine) window.gameEngine.saveGameToServer();
+            });
+            loadServerBtn.addEventListener('click', () => {
+                if (window.gameEngine) window.gameEngine.loadGameFromServer();
             });
         }
     } catch(e) {
